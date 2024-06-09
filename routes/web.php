@@ -19,3 +19,7 @@ Route::get('/certificates', function () {
     return Inertia::render('Certificates');
 });
 
+Route::get('/card', function () {
+    return Inertia::render('Card');
+});
+

@@ -8,7 +8,7 @@ export default function Certificates() {
             <Header />
             <div className="container certificates">
                 <div className="head">
-                    <h3>
+                    <h3 className="current-page">
                         Главная / <b className="current-page">Сертификаты</b>
                     </h3>
                     <h1>Сертификаты</h1>

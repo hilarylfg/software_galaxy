@@ -25,6 +25,10 @@ b.current-page {
     color: #8B00FF;
 }
 
+h3.current-page {
+    font-size: 13px;
+}
+
 .wrapper {
     position: absolute;
     width: 100%;
@@ -133,6 +137,10 @@ header ul.btns p {
 
 header .btn p {
     font-size: 12px;
+}
+
+header .btn {
+    text-align: center;
 }
 
 header ul.btns li {
@@ -634,7 +642,6 @@ footer > p {
 
 .certificates .head h3 {
     font-size: 13px;
-
 }
 
 .certificates .head h1 {
@@ -653,3 +660,60 @@ footer > p {
     margin-bottom: 1em;
 }
 
+/* Card */
+
+.card {
+    padding: 20px 0;
+}
+
+.card .product {
+    padding: 50px 0;
+    display: flex;
+    gap: 60px;
+}
+
+.card .product .image img {
+    background-color: #1A1A1A;
+    padding: 20px 20px;
+    border-radius: 20px;
+    width: 530px;
+}
+
+.card .product .info {
+    background: #1A1A1A;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 40px 40px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.card .product .info .specs{
+    width: 380px;
+}
+
+.card .product .info .price{
+    background: #2A2A2A; 
+    width: 200px;
+    height: 120px;
+    padding: 20px 20px;
+    border-radius: 20px;
+    right: 0;
+}
+
+.card .product .info .price button {
+    width: 100%;
+    background: #8B00FF;
+    color: #fff;
+    border-radius: 10px;
+    height: 40px;
+    border: 0;
+    transition: all 500ms ease;
+    margin-top: 40px;
+}
+
+.card .product .info .price button:hover {
+    cursor: pointer;
+    background: #CD00CD;
+}

@@ -26,7 +26,7 @@ export default function Header() {
                     </div></li>
                 <li><div className='btn'>
                     <Link href="#"><img src="/img/profile.svg"/></Link>
-                    <p>Войти</p>
+                    <p>Профиль</p>
                     </div></li>
             </ul>
         </header>

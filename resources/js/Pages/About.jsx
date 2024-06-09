@@ -8,7 +8,7 @@ export default function About() {
     <Header/>
         <div className="container hero-about">
             <div className="block">
-                <h3>Главная   /   <b className="current-page">О нас</b></h3>
+                <h3 className="current-page">Главная   /   <b className="current-page">О нас</b></h3>
                 <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>

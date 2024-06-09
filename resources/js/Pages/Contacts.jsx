@@ -8,7 +8,7 @@ export default function Contacts() {
       <Header/>
       <div className="container hero-contacts">
             <div className="head-block">
-                <h3>Главная   /   <b className="current-page">Контакты</b></h3>
+                <h3 className="current-page">Главная   /   <b className="current-page">Контакты</b></h3>
                 <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             </div>
