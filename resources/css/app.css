@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&family=Roboto:wght@400;500;700&family=Rubik:wght@500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+b.current-page {
+    color: #8B00FF;
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    background: #0A0A0A ;
+    z-index: -1;
+}
+
+.star {
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white; 
+    z-index: -1;
+}
+
+button {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+}
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header {
+    padding: 50px 0;
+    align-items: center;
+}
+
+header.container {
+    display: flex;
+    justify-content: space-between
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 800;
+    margin-right: 15px;
+}
+
+header .block {
+    display: flex;
+    align-items: center;
+}
+
+header .block button {
+    padding: 10px; 
+    border: none; 
+    background-color: #8B00FF; 
+    border-radius: 10px;
+    cursor: pointer; 
+    outline: none; 
+}
+
+header .block button img {
+    width: 26px;
+    height: auto;
+}
+
+header a {
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0px;
+}
+
+
+header input {
+    background: #1A1A1A;
+    color: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    width: 300px;
+    padding: 15px 20px;
+    margin: 0 30px;
+    position: relative;
+    z-index: 1;
+    flex-grow: 1; 
+}
+
+header ul.btns {
+    margin-left: 30px;
+}
+
+header ul.btns p {
+    font-size: 12px;
+}
+
+header .btn p {
+    font-size: 12px;
+}
+
+header ul.btns li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right : 20px;
+}
+
+header ul.btns li:last-child {
+    margin-right: 0; 
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    background-color: #8B00FF;
+    width: auto;
+    height: 5px;
+    top: 4px;
+    position: relative;
+}
+
+header nav ul li:not(.active):not(.button) a:hover {
+    border-bottom: 5px solid #8B00FF;
+    padding-bottom: 4px;
+    transition: all 200ms ease;
+}
+
+/* Footer */
+
+footer {
+    background: #1A1A1A;
+    padding: 20px 0;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+}
+
+footer .blocks .logo {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+footer .blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .blocks p {
+    font-size: 16px;
+    width: 300px;
+    margin-top: 7px;
+}
+
+footer .blocks .us {
+    width: 200px;
+}
+
+footer .blocks p img {
+    position: relative;
+    top: 7px;
+    margin-right: 10px;
+}
+
+footer .blocks a {
+    color: #fff;
+}
+
+footer .blocks h4 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+footer .blocks ul {
+    list-style: none;
+}
+
+footer .blocks ul li {
+    margin-top: 7px;
+    opacity: 0.8;
+}
+
+footer hr {
+    margin: 30px 0;
+    border: 0;
+    height: 0.8px;
+    background: #fff;
+}
+
+footer .blocks .socials ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+footer .blocks .socials ul a img{
+    transition: all 500ms ease;
+}
+
+footer .blocks .socials ul a:hover img {
+    transform: scale(1.1)
+}
+
+footer > p {
+    text-align: center;
+}
+
+/* Email */
+
+.email {
+    padding-bottom: 120px;
+}
+
+.email h3 {
+    margin-top: 60px;
+    font-size: 30px;
+}
+
+.email .block {
+    background: #1A1A1A;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 40px 3px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email .block h4 {
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.email .block p {
+    width: 500px;
+    padding-left: 30px;
+}
+
+.email .block input {
+    background: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    width: 380px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 20px 30px;
+    position: relative;
+    right: -90px;
+    z-index: 1;
+}
+
+.email .block input::placeholder {
+    color:#898989
+}
+
+.email .block button {
+    cursor: pointer;
+    border: 0;
+    padding: 13px 17px;
+    position: relative;
+    right: 50px;
+    z-index: 2;
+}
+
+.email .block button{
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    background: #8B00FF;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 500ms ease;
+    z-index: 1;
+}
+
+.email .block button:hover {
+    background: #CD00CD;
+}
+
+
+/* Hero */
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.hero--info {
+    width: 520px;
+    padding-top: 80px;
+}
+
+.hero--info h2 {
+    color: #8B00FF;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero--info h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hero--info p {
+    font-weight: 500;
+    line-height: 170%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.hero--info .button {
+    background: rgb(163,79,250);
+    background: linear-gradient(90deg, rgba(163,79,250,1) 0%, rgba(195,158,251,1) 100%); 
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    z-index: 1;
+}
+
+.hero--info .button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero img {
+    position: absolute;
+    top: 25px;
+    right: 100px;
+}
+
+/* Тренды */
+
+.trending {
+    padding-top: 50px;
+}
+
+.trending h3 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 31px;
+}
+
+.trending .see-all {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    color: #fff;
+    background: rgb(163,79,250);
+    background: linear-gradient(90deg, rgba(163,79,250,1) 0%, rgba(195,158,251,1) 100%); 
+    border-radius: 10px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}
+
+.trending .see-all:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.trending .programs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 0;
+
+}
+
+.trending .programs span {
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trending .programs span img {
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+/* Contacts */
+
+.hero-contacts {
+    padding: 50px 0;
+    z-index: 1;
+}
+
+.hero-contacts .head-block {
+    display: block;
+    height: 115px;
+    padding-bottom: 20px;
+}
+
+.hero-contacts .head-block h3 {
+    font-size: 13px;
+    text-align: center;
+}
+
+.hero-contacts .head-block h1 {
+    font-size: 33px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.hero-contacts .head-block p {
+    font-weight: 500;
+    text-align: center;
+}
+
+.hero-contacts img.map {
+    position: relative;
+    width: 70%;
+    margin: 80px 15%;
+}
+
+.hero-contacts .block hr {
+    height: 102px;
+}
+
+.hero-contacts .block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Rubik", sans-serif;
+}
+
+.hero-contacts .block .follow ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.hero-contacts .block .follow ul li {
+    display: inline-block;
+}
+
+.hero-contacts .block h3 {
+    display: flex;
+    align-items: center;
+}
+
+.hero-contacts .block img.h3 {
+    margin-right: 20px;
+}
+
+
+
+/* About */
+
+.hero-about {
+    padding: 50px 0;
+    padding-top: 100px;
+    display: flex;
+}
+
+.hero-about .block {
+    display: block;
+    width: 450px;
+}
+
+.hero-about .img-office {
+    position: absolute;
+    right: 0px;
+    margin-top: -50px;
+}
+
+.hero-about .block h1 {
+    font-weight: 700;
+    font-size: 30px;
+    padding: 40px 0;
+}
+
+.hero-about .block h3 {
+    font-size: 13px;
+}
+
+.hero-about .block button {
+    background: rgb(163,79,250);
+    background: linear-gradient(90deg, rgba(163,79,250,1) 0%, rgba(195,158,251,1) 100%); 
+    color: #fff;
+    font-size: px;
+    border-radius: 50px;
+    margin-top: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    z-index: 1;
+}
+
+.hero-about .block button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero-about .block img {
+    padding-left: 10px;
+}
+
+/* Work */
+
+.hero-work {
+    padding-bottom: 50px;
+    padding-top: 100px;
+}
+
+.hero-work h2 {
+    font-size: 30px;
+    padding-bottom: 50px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+}
+
+.hero-work .blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-work .blocks .block {
+    width: 340px;
+    background-color: #1A1A1A;
+    padding: 50px 35px;
+    border-radius: 20px;
+}
+
+.hero-work .blocks .block span {
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.hero-work .blocks .block span.badge-purple {
+    background-color: purple;
+}
+
+.hero-work .blocks .block span.badge-green {
+    background-color: green
+}
+
+.hero-work .blocks .block span.badge-orange {
+    background-color: orange;
+}
+
+.hero-work .blocks .block h4 {
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.hero-work .blocks .block p {
+    font-size: 14px;
+}
+
+.hero-workers {
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.hero-workers h2 {
+    font-size: 30px;
+    padding-bottom: 50px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+}
+
+.hero-workers .blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-workers .blocks .block {
+    display: block;
+    text-align: center;
+    background-color: #1A1A1A;
+    padding: 35px 85px;
+    border-radius: 20px;
+}
+
+/* Certificates */
+
+.certificates {
+    padding: 50px 0;
+}
+
+.certificates .head {
+    padding-bottom: 50px;
+    text-align: center;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.certificates .head h3 {
+    font-size: 13px;
+
+}
+
+.certificates .head h1 {
+    font-weight: 700;
+    font-size: 30px;
+    padding: 40px 0;
+}
+
+.certificates .photos {
+    columns: 4;
+    column-gap: 20px;
+}
+
+.certificates .photos img {
+    max-width: 100%;
+    margin-bottom: 1em;
+}
+
