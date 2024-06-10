@@ -23,3 +23,7 @@ Route::get('/card', function () {
     return Inertia::render('Card');
 });
 
+Route::get('/catalog', function () {
+    return Inertia::render('Catalog');
+});
+

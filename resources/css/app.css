@@ -717,3 +717,80 @@ footer > p {
     cursor: pointer;
     background: #CD00CD;
 }
+
+/* Catalog */ 
+
+.catalog {
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.catalog .filters {
+    background-color: #1A1A1A;
+    width: 320px;
+    height: fit-content;
+    padding: 20px 20px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.catalog .filters .block {
+    padding-bottom: 30px;
+}
+
+.catalog .filters .block:last-child {
+    padding-bottom: 0;
+}
+
+.catalog .filters .block input {
+    margin-right: 10px;
+}
+
+.catalog .filters .block h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.catalog .filters .price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog .filters .price input{
+    width: 140px;
+    background: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 5px 5px;
+    position: relative;
+}
+
+.catalog .list .settings {
+    background-color: #1A1A1A;
+    flex-grow: 1;
+    padding: 15px 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.catalog .list .settings p{
+    text-align: right;
+}
+
+.catalog .list .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.catalog .list .product {
+    background-color: #1A1A1A;
+    width: 275px;
+    height: 370px;
+    padding: 25px 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
