@@ -42,7 +42,7 @@ h3.current-page {
     position: absolute;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 5px white; 
+    box-shadow: 0 0 5px white;
     z-index: -1;
 }
 
@@ -80,12 +80,12 @@ header .block {
 }
 
 header .block button {
-    padding: 10px; 
-    border: none; 
-    background-color: #8B00FF; 
+    padding: 10px;
+    border: none;
+    background-color: #8B00FF;
     border-radius: 10px;
-    cursor: pointer; 
-    outline: none; 
+    cursor: pointer;
+    outline: none;
 }
 
 header .block button img {
@@ -107,7 +107,7 @@ header nav ul li {
 }
 
 header nav ul li:last-child {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 
@@ -124,7 +124,7 @@ header input {
     margin: 0 30px;
     position: relative;
     z-index: 1;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 header ul.btns {
@@ -150,7 +150,7 @@ header ul.btns li {
 }
 
 header ul.btns li:last-child {
-    margin-right: 0; 
+    margin-right: 0;
 }
 
 header nav ul li.active::after {
@@ -226,7 +226,7 @@ footer .blocks ul li {
 footer hr {
     margin: 30px 0;
     border: 0;
-    height: 0.8px;
+    height: 1px;
     background: #fff;
 }
 
@@ -357,7 +357,7 @@ footer > p {
 
 .hero--info .button {
     background: rgb(163,79,250);
-    background: linear-gradient(90deg, rgba(163,79,250,1) 0%, rgba(195,158,251,1) 100%); 
+    background: linear-gradient(90deg, rgba(163,79,250,1) 0%, rgba(195,158,251,1) 100%);
     color: #fff;
     font-size: 20px;
     border-radius: 50px;
@@ -395,7 +395,7 @@ footer > p {
     font-weight: 500;
     color: #fff;
     background: rgb(163,79,250);
-    background: linear-gradient(90deg, rgba(163,79,250,1) 0%, rgba(195,158,251,1) 100%); 
+    background: linear-gradient(90deg, rgba(163,79,250,1) 0%, rgba(195,158,251,1) 100%);
     border-radius: 10px;
     padding: 12px 23px;
     float: right;
@@ -501,8 +501,7 @@ footer > p {
 /* About */
 
 .hero-about {
-    padding: 50px 0;
-    padding-top: 100px;
+    padding: 100px 0 50px;
     display: flex;
 }
 
@@ -513,7 +512,7 @@ footer > p {
 
 .hero-about .img-office {
     position: absolute;
-    right: 0px;
+    right: 0;
     margin-top: -50px;
 }
 
@@ -529,9 +528,8 @@ footer > p {
 
 .hero-about .block button {
     background: rgb(163,79,250);
-    background: linear-gradient(90deg, rgba(163,79,250,1) 0%, rgba(195,158,251,1) 100%); 
+    background: linear-gradient(90deg, rgba(163,79,250,1) 0%, rgba(195,158,251,1) 100%);
     color: #fff;
-    font-size: px;
     border-radius: 50px;
     margin-top: 50px;
     padding: 15px 30px;
@@ -694,7 +692,7 @@ footer > p {
 }
 
 .card .product .info .price{
-    background: #2A2A2A; 
+    background: #2A2A2A;
     width: 200px;
     height: 120px;
     padding: 20px 20px;
@@ -718,7 +716,7 @@ footer > p {
     background: #CD00CD;
 }
 
-/* Catalog */ 
+/* Catalog */
 
 .catalog {
     display: flex;
@@ -789,8 +787,20 @@ footer > p {
 .catalog .list .product {
     background-color: #1A1A1A;
     width: 275px;
-    height: 370px;
+    height: fit-content;
     padding: 25px 25px;
     border-radius: 20px;
     margin-bottom: 20px;
+}
+
+.catalog .list .product .image img{
+    width: 50%;
+    justify-content: center;
+}
+
+.catalog .list .product .image button{
+    width: 25px;
+    height: 25px;
+    background-image: url("/public/img/favorite.svg");
+    background-size: cover;
 }

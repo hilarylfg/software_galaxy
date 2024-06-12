@@ -4,7 +4,7 @@ import Header from "@/Components/Header"
 
 export default function Contacts() {
   return (
-    <>  
+    <>
       <Header/>
       <div className="container hero-contacts">
             <div className="head-block">
@@ -12,21 +12,21 @@ export default function Contacts() {
                 <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             </div>
-            <img src="/img/HugeGlobal.svg" className="map"/>
+            <img src="/img/HugeGlobal.svg" alt="" className="map"/>
             <div className="block">
                 <div className="follow">
                     <h2>Follow us</h2>
                     <ul>
-                        <li><a href="https://t.me/hilarylfg1769"><img src="/img/telegram.svg"/></a></li>
-                        <li><a href="#"><img src="/img/vk.svg"/></a></li>
-                        <li><a href="#"><img src="/img/instagram.svg"/></a></li>
-                        <li><a href="#"><img src="/img/youtube.svg"/></a></li>
+                        <li><a href="https://t.me/hilarylfg1769"><img src="/img/telegram.svg" alt=""/></a></li>
+                        <li><a href="#"><img src="/img/vk.svg" alt=""/></a></li>
+                        <li><a href="#"><img src="/img/instagram.svg" alt=""/></a></li>
+                        <li><a href="#"><img src="/img/youtube.svg" alt=""/></a></li>
                     </ul>
                 </div>
                 <hr/>
-                <h3><img src="/img/phone.svg" className="h3"/>+7(952)812-52-52</h3>
+                <h3><img src="/img/phone.svg" className="h3" alt=""/>+7(952)812-52-52</h3>
                 <hr/>
-                <h3><img src="/img/gps.svg" className="h3"/>г.Москва ул. Кирпичная, 33</h3>
+                <h3><img src="/img/gps.svg" className="h3" alt=""/>г.Москва ул. Кирпичная, 33</h3>
             </div>
         </div>
 

@@ -1,13 +1,13 @@
 function createStars(numberOfStars) {
-    var bgBlack = document.getElementById("root");
+    let bgBlack = document.getElementById("root");
 
-    for (var i = 0; i < numberOfStars; i++) {
-        var star = document.createElement("div");
+    for (let i = 0; i < numberOfStars; i++) {
+        let star = document.createElement("div");
         star.className = "star";
         star.style.top = Math.random() * 99.8 + "%";
         star.style.left = Math.random() * 99.8 + "%";
 
-        var size = Math.random() * 3 + "px";
+        let size = Math.random() * 3 + "px";
         star.style.width = size;
         star.style.height = size;
 

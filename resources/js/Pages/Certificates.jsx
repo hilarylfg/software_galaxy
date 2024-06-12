@@ -24,31 +24,31 @@ export default function Certificates() {
                 </div>
                 <div className="photos">
                     <div>
-                        <img src="/img/certificates/certificate1.png" />
+                        <img src="/img/certificates/certificate1.png" alt=""/>
                     </div>
                     <div>
-                        <img src="/img/certificates/certificate2.png" />
+                        <img src="/img/certificates/certificate2.png" alt=""/>
                     </div>
                     <div>
-                        <img src="/img/certificates/certificate3.png" />
+                        <img src="/img/certificates/certificate3.png" alt=""/>
                     </div>
                     <div>
-                        <img src="/img/certificates/certificate4.jpg" />
+                        <img src="/img/certificates/certificate4.jpg" alt=""/>
                     </div>
                     <div>
-                        <img src="/img/certificates/certificate5.jpg" />
+                        <img src="/img/certificates/certificate5.jpg" alt=""/>
                     </div>
                     <div>
-                        <img src="/img/certificates/certificate6.jpg" />
+                        <img src="/img/certificates/certificate6.jpg" alt=""/>
                     </div>
                     <div>
-                        <img src="/img/certificates/certificate7.webp" />
+                        <img src="/img/certificates/certificate7.webp" alt=""/>
                     </div>
                     <div>
-                        <img src="/img/certificates/certificate8.jpg" />
+                        <img src="/img/certificates/certificate8.jpg" alt=""/>
                     </div>
                     <div>
-                        <img src="/img/certificates/certificate9.webp" />
+                        <img src="/img/certificates/certificate9.webp" alt=""/>
                     </div>
                 </div>
             </div>

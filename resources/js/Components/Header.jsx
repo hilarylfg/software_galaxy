@@ -5,7 +5,7 @@ export default function Header() {
     <header className="container">
             <div className="block">
                 <span className="logo"><Link href="/" >Software Galaxy</Link></span>
-                <button><img src="/img/catalog.svg" alt=""/></button>
+                <Link href="/catalog"><button><img src="/img/catalog.svg" alt=""/></button></Link>
             </div>
             <input type="text" placeholder="Поиск по сайту"/>
             <nav>
@@ -17,15 +17,15 @@ export default function Header() {
             </nav>
             <ul className="btns">
                 <li><div className='btn'>
-                    <Link href="#"><img src="/img/favorite.svg"/></Link>
+                    <Link href="#"><img src="/img/favorite.svg" alt=''/></Link>
                     <p>Избранное</p>
                     </div></li>
                 <li><div className='btn'>
-                    <Link href="#"><img src="/img/cart.svg"/></Link>
+                    <Link href="#"><img src="/img/cart.svg" alt=''/></Link>
                     <p>Корзина</p>
                     </div></li>
                 <li><div className='btn'>
-                    <Link href="#"><img src="/img/profile.svg"/></Link>
+                    <Link href="#"><img src="/img/profile.svg" alt=''/></Link>
                     <p>Профиль</p>
                     </div></li>
             </ul>

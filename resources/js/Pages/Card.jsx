@@ -13,7 +13,7 @@ export default function Card() {
                 </h3>
                 <div className="product">
                     <div className="image">
-                        <img src="/img/card.png"/>
+                        <img src="/img/products/product-test.png" alt=""/>
                     </div>
                     <div className="info">
                         <div className="specs">

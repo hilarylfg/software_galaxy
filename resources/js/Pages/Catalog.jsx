@@ -25,10 +25,9 @@ export default function Catalog() {
                     </div>
                     <div className="block">
                         <h2>Наличие</h2>
-                        <input type="checkbox" />В наличии
+                        <input type="checkbox" /> В наличии
                         <br />
-                        <input type="checkbox" />
-                        Нет в наличии
+                        <input type="checkbox" /> Нет в наличии
                     </div>
                     <div className="block">
                         <h2>Разработчик</h2>
@@ -56,7 +55,11 @@ export default function Catalog() {
                     </div>
                     <div className="products">
                         <div className="product">
-                            ds
+                            <div className="image">
+                                <img src="/img/products/product.png" alt=""/>
+                                <button></button>
+                            </div>
+                            <div className=""></div>
                         </div>
                         <div className="product">
                             ds
