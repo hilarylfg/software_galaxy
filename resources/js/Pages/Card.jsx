@@ -20,7 +20,7 @@ export default function Card() {
                             <h1>Windows 11</h1>
                             <p></p>
                         </div>
-                        <div className="price" id="bg">
+                        <div className="price">
                             <h2>15 999 ₽</h2>
                             <button className="addToCart">В корзину</button>
                         </div>

@@ -28,7 +28,7 @@ export default function Footer() {
                         <li><a href="https://t.me/maratik_63"><img src="/img/telegram.svg" alt=""/></a></li>
                         <li><a href="#"><img src="/img/vk.svg" alt=""/></a></li>
                         <li><a href="#"><img src="/img/instagram.svg" alt=""/></a></li>
-                        <li><a href="#"><img src="/img/youtube.svg" alt=""/></a></li>
+                        <li><a href="https://www.youtube.com/@DERGIDVER"><img src="/img/youtube.svg" alt=""/></a></li>
                     </ul>
                 </div>
             </div>
