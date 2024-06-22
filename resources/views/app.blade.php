@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
         function createStars(numberOfStars) {
-            var bgBlack = document.getElementById("bg");
+            let bgBlack = document.getElementById("bg");
 
-            for (var i = 0; i < numberOfStars; i++) {
-                var star = document.createElement("body");
+            for (let i = 0; i < numberOfStars; i++) {
+                let star = document.createElement("body");
                 star.className = "star";
                 star.style.top = Math.random() * 99.8 + "%";
                 star.style.left = Math.random() * 99.8 + "%";
 
-                var size = Math.random() * 3 + "px";
+                let size = Math.random() * 3 + "px";
                 star.style.width = size;
                 star.style.height = size;
 
