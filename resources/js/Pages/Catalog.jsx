@@ -70,6 +70,105 @@ export default function Catalog() {
                                 </div>
                                 <button>Подробнее</button>
                             </div>
+                            <div className="product">
+                                <div className="images">
+                                    <img src="/img/products/product.png" alt=""/>
+                                    <a href="#"><img className="favorite addToFavorite" src="/img/favorite.svg" alt=""/></a>
+                                </div>
+                                <h1>Windows 11 Pro</h1>
+                                <p>В наличии</p>
+                                <div className="prices">
+                                    <h2><Price value={15999}/></h2>
+                                    <h3><strike><Price value={19999}/></strike></h3>
+                                    <h4>-{Math.round((19999 - 15999) / 19999 * 100)}%</h4>
+                                </div>
+                                <button>Подробнее</button>
+                            </div>
+                            <div className="product">
+                                <div className="images">
+                                    <img src="/img/products/product.png" alt=""/>
+                                    <a href="#"><img className="favorite addToFavorite" src="/img/favorite.svg" alt=""/></a>
+                                </div>
+                                <h1>Windows 11 Pro</h1>
+                                <p>В наличии</p>
+                                <div className="prices">
+                                    <h2><Price value={15999}/></h2>
+                                    <h3><strike><Price value={19999}/></strike></h3>
+                                    <h4>-{Math.round((19999 - 15999) / 19999 * 100)}%</h4>
+                                </div>
+                                <button>Подробнее</button>
+                            </div>
+                            <div className="product">
+                                <div className="images">
+                                    <img src="/img/products/product.png" alt=""/>
+                                    <a href="#"><img className="favorite addToFavorite" src="/img/favorite.svg" alt=""/></a>
+                                </div>
+                                <h1>Windows 11 Pro</h1>
+                                <p>В наличии</p>
+                                <div className="prices">
+                                    <h2><Price value={15999}/></h2>
+                                    <h3><strike><Price value={19999}/></strike></h3>
+                                    <h4>-{Math.round((19999 - 15999) / 19999 * 100)}%</h4>
+                                </div>
+                                <button>Подробнее</button>
+                            </div>
+                            <div className="product">
+                                <div className="images">
+                                    <img src="/img/products/product.png" alt=""/>
+                                    <a href="#"><img className="favorite addToFavorite" src="/img/favorite.svg" alt=""/></a>
+                                </div>
+                                <h1>Windows 11 Pro</h1>
+                                <p>В наличии</p>
+                                <div className="prices">
+                                    <h2><Price value={15999}/></h2>
+                                    <h3><strike><Price value={19999}/></strike></h3>
+                                    <h4>-{Math.round((19999 - 15999) / 19999 * 100)}%</h4>
+                                </div>
+                                <button>Подробнее</button>
+                            </div>
+                            <div className="product">
+                                <div className="images">
+                                    <img src="/img/products/product.png" alt=""/>
+                                    <a href="#"><img className="favorite addToFavorite" src="/img/favorite.svg" alt=""/></a>
+                                </div>
+                                <h1>Windows 11 Pro</h1>
+                                <p>В наличии</p>
+                                <div className="prices">
+                                    <h2><Price value={15999}/></h2>
+                                    <h3><strike><Price value={19999}/></strike></h3>
+                                    <h4>-{Math.round((19999 - 15999) / 19999 * 100)}%</h4>
+                                </div>
+                                <button>Подробнее</button>
+                            </div>
+                            <div className="product">
+                                <div className="images">
+                                    <img src="/img/products/product.png" alt=""/>
+                                    <a href="#"><img className="favorite addToFavorite" src="/img/favorite.svg" alt=""/></a>
+                                </div>
+                                <h1>Windows 11 Pro</h1>
+                                <p>В наличии</p>
+                                <div className="prices">
+                                    <h2><Price value={15999}/></h2>
+                                    <h3><strike><Price value={23999}/></strike></h3>
+                                    <h4>-{Math.round((23999 - 15999) / 23999 * 100)}%</h4>
+                                </div>
+                                <button>Подробнее</button>
+                            </div>
+                            <div className="product">
+                                <div className="images">
+                                    <img src="/img/products/product.png" alt=""/>
+                                    <a href="#"><img className="favorite addToFavorite" src="/img/favorite.svg" alt=""/></a>
+                                </div>
+                                <h1>Windows 11 Pro</h1>
+                                <p>В наличии</p>
+                                <div className="prices">
+                                    <h2><Price value={15999}/></h2>
+                                    <h3><strike><Price value={19999}/></strike></h3>
+                                    <h4>-{Math.round((19999 - 15999) / 19999 * 100)}%</h4>
+                                </div>
+                                <button>Подробнее</button>
+                            </div>
+
 
 
                         </div>

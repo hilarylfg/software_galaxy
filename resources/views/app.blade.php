@@ -37,7 +37,7 @@
     @inertiaHead
 </head>
 
-<body id="bg" class="wrapper" onload="createStars(1000)">
+<body id="bg" class="wrapper" onload="createStars(1300)">
     @inertia
 </body>
 

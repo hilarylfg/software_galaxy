@@ -36,8 +36,8 @@ h3.current-page {
 }
 
 .star {
-  width: 4px;
-  height: 4px;
+  width: 16px;
+  height: 16px;
   position: absolute;
   background-color: #fff;
   border-radius: 50%;
@@ -391,8 +391,9 @@ footer > p {
 }
 .hero-contacts img.map {
   position: relative;
-  width: 70%;
-  margin: 80px 15%;
+  width: 80%;
+  display: block;
+  margin: 80px auto;
 }
 .hero-contacts .block {
   display: flex;
