@@ -726,6 +726,10 @@ footer {
 }
 
 /* Catalog */
+.catalog-title {
+    padding-bottom: 20px;
+    font-family: $second-font;
+}
 
 .catalog {
     display: flex;
@@ -733,7 +737,7 @@ footer {
 
     .filters {
         background-color: #1A1A1A;
-        width: 320px;
+        width: 280px;
         height: fit-content;
         padding: 20px 20px;
         border-radius: 20px;
@@ -756,11 +760,11 @@ footer {
             }
         }
 
-        .price {
+        .price-filter {
             display: flex;
 
             input {
-                width: 135px;
+                width: 100%;
                 background: $white;
                 outline: none;
                 border: 0;
@@ -770,6 +774,7 @@ footer {
                 padding: 5px 5px;
                 position: relative;
             }
+
             input:last-child {
                 margin-right: 0;
             }
@@ -779,21 +784,24 @@ footer {
 
 .list {
     .settings {
+        display: flex;
+        align-items: center;
         background-color: #1A1A1A;
-        flex-grow: 1;
-        padding: 15px 15px;
+        padding: 15px 25px;
         border-radius: 20px;
         margin-bottom: 20px;
 
-        p {
+        h4 {
+            font-weight: normal;
             text-align: right;
+            margin-left: auto;
         }
     }
 
     .products {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: calc((1060px - 325px*3) / 2);
     }
 
     .product {
@@ -816,10 +824,6 @@ footer {
             margin: 10px 0;
             font-size: 14px;
             color: green;
-        }
-
-        h2 {
-            margin-bottom: 10px;
         }
 
         button {
@@ -850,6 +854,25 @@ footer {
                 float: right;
                 width: 25px;
                 height: 25px;
+            }
+        }
+
+        .prices{
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+
+            h3 {
+                margin-right: 10px;
+                font-size: 15px;
+                color: gray;
+                margin-left: 10px;
+            }
+
+            h4 {
+                color: #d45959;
+                font-size: 15px;
+                font-weight: normal;
             }
         }
     }
