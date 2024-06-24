@@ -1,10 +1,11 @@
 import Header from "@/Components/Header";
 import Footer from "@/Components/Footer";
+import Price from "@/Components/PriceFormatter.jsx";
 
 export default function Card() {
     return (
         <>
-            <Header />
+            <Header/>
 
             <div className="container card">
                 <h3 className="current-page">
@@ -21,14 +22,18 @@ export default function Card() {
                             <p></p>
                         </div>
                         <div className="price">
-                            <h2>15 999 ₽</h2>
+                            <h2><Price value={15999}/></h2>
+                            <div className="sale">
+                                <h3><strike><Price value={19999}/></strike></h3>
+                                <h4>-{Math.round((19999 - 15999) / 19999 * 100)}%</h4>
+                            </div>
                             <button className="addToCart">В корзину</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <Footer />
+            <Footer/>
         </>
     );
 }

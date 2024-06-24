@@ -5,7 +5,7 @@ $second-font: "Rubik", sans-serif;
 
 $white: #fff;
 $wrapper: #0A0A0A;
-$gray : #1A1A1A;
+$gray: #1A1A1A;
 $purple: #8B00FF;
 $bright-purple: #CD00CD;
 
@@ -674,7 +674,7 @@ footer {
 /* Card */
 
 .card {
-    padding: 20px 0;
+    padding-bottom: 50px;
 
     .product {
         padding: 50px 0;
@@ -702,6 +702,7 @@ footer {
             }
 
             .price {
+                position: relative;
                 background: #2A2A2A;
                 width: 200px;
                 height: 120px;
@@ -709,15 +710,35 @@ footer {
                 border-radius: 20px;
                 right: 0;
 
+                .sale {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+
+                    h3 {
+                        margin-right: 10px;
+                        font-size: 15px;
+                        color: gray;
+                    }
+
+                    h4 {
+                        color: #d45959;
+                        font-size: 15px;
+                        font-weight: normal;
+                    }
+                }
+
+
                 button {
-                    width: 100%;
+                    position: absolute;
+                    width: 200px;
                     background: $purple;
                     color: $white;
                     border-radius: 10px;
                     height: 40px;
                     border: 0;
                     transition: all 500ms ease;
-                    margin-top: 40px;
+                    bottom: 20px;
 
                     &:hover {
                         cursor: pointer;
@@ -747,7 +768,7 @@ footer {
         border-radius: 20px;
         margin-right: 20px;
 
-        .block {
+        .filter-block {
             padding-bottom: 30px;
 
             &:last-child {
@@ -805,16 +826,15 @@ footer {
     .products {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: calc((1060px - 325px*3) / 2);
+        grid-gap: calc((1060px - 335px * 3) / 2);
     }
 
-    .product {
+    .product-block {
         background-color: $gray;
-        width: 275px;
+        width: 285px;
         height: fit-content;
         padding: 25px 25px;
         border-radius: 20px;
-        margin-bottom: 20px;
 
         h1 {
             font-family: $second-font;
@@ -861,22 +881,27 @@ footer {
             }
         }
 
-        .prices{
+        .prices {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
 
-            h3 {
-                margin-right: 10px;
-                font-size: 15px;
-                color: gray;
-                margin-left: 10px;
-            }
+            .sale {
+                display: flex;
 
-            h4 {
-                color: #d45959;
-                font-size: 15px;
-                font-weight: normal;
+                h3 {
+
+                    margin-right: 10px;
+                    font-size: 15px;
+                    color: gray;
+                    margin-left: 10px;
+                }
+
+                h4 {
+                    color: #d45959;
+                    font-size: 15px;
+                    font-weight: normal;
+                }
             }
         }
     }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 
-class ProfileController extends Controller
+class CatalogController extends Controller
 {
     public function index()
     {

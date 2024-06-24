@@ -560,7 +560,7 @@ footer > p {
 
 /* Card */
 .card {
-  padding: 20px 0;
+  padding-bottom: 50px;
 }
 .card .product {
   padding: 50px 0;
@@ -586,6 +586,7 @@ footer > p {
   width: 380px;
 }
 .card .product .info .price {
+  position: relative;
   background: #2A2A2A;
   width: 200px;
   height: 120px;
@@ -593,15 +594,31 @@ footer > p {
   border-radius: 20px;
   right: 0;
 }
+.card .product .info .price .sale {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.card .product .info .price .sale h3 {
+  margin-right: 10px;
+  font-size: 15px;
+  color: gray;
+}
+.card .product .info .price .sale h4 {
+  color: #d45959;
+  font-size: 15px;
+  font-weight: normal;
+}
 .card .product .info .price button {
-  width: 100%;
+  position: absolute;
+  width: 200px;
   background: #8B00FF;
   color: #fff;
   border-radius: 10px;
   height: 40px;
   border: 0;
   transition: all 500ms ease;
-  margin-top: 40px;
+  bottom: 20px;
 }
 .card .product .info .price button:hover {
   cursor: pointer;
@@ -626,16 +643,16 @@ footer > p {
   border-radius: 20px;
   margin-right: 20px;
 }
-.catalog .filters .block {
+.catalog .filters .filter-block {
   padding-bottom: 30px;
 }
-.catalog .filters .block:last-child {
+.catalog .filters .filter-block:last-child {
   padding-bottom: 0;
 }
-.catalog .filters .block input {
+.catalog .filters .filter-block input {
   margin-right: 10px;
 }
-.catalog .filters .block h2 {
+.catalog .filters .filter-block h2 {
   margin-bottom: 10px;
   font-size: 16px;
 }
@@ -673,29 +690,28 @@ footer > p {
 .list .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 42.5px;
+  grid-gap: 27.5px;
 }
-.list .product {
+.list .product-block {
   background-color: #1A1A1A;
-  width: 275px;
+  width: 285px;
   height: fit-content;
   padding: 25px 25px;
   border-radius: 20px;
-  margin-bottom: 20px;
 }
-.list .product h1 {
+.list .product-block h1 {
   font-family: "Rubik", sans-serif;
   font-weight: normal;
   font-size: 16px;
   margin-top: 10px;
 }
-.list .product p {
+.list .product-block p {
   font-family: "Rubik", sans-serif;
   margin: 10px 0;
   font-size: 14px;
   color: green;
 }
-.list .product button {
+.list .product-block button {
   width: 100%;
   background: #8B00FF;
   color: #fff;
@@ -704,35 +720,38 @@ footer > p {
   border: 0;
   transition: all 500ms ease;
 }
-.list .product button:hover {
+.list .product-block button:hover {
   cursor: pointer;
   background: #CD00CD;
 }
-.list .product .images {
+.list .product-block .images {
   display: flex;
 }
-.list .product .images img {
+.list .product-block .images img {
   display: block;
   width: 50%;
   margin: 0 auto;
 }
-.list .product .images img.favorite {
+.list .product-block .images img.favorite {
   float: right;
   width: 25px;
   height: 25px;
 }
-.list .product .prices {
+.list .product-block .prices {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
-.list .product .prices h3 {
+.list .product-block .prices .sale {
+  display: flex;
+}
+.list .product-block .prices .sale h3 {
   margin-right: 10px;
   font-size: 15px;
   color: gray;
   margin-left: 10px;
 }
-.list .product .prices h4 {
+.list .product-block .prices .sale h4 {
   color: #d45959;
   font-size: 15px;
   font-weight: normal;
