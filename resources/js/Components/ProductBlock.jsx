@@ -1,4 +1,5 @@
 import Price from "@/Components/PriceFormatter.jsx";
+import RatingForProducts from "@/Components/RatingForProducts.jsx";
 
 export default function ProductBlock(props) {
 
@@ -10,6 +11,9 @@ export default function ProductBlock(props) {
                     <a href="#"><img className="favorite addToFavorite" src="/img/favorite.svg" alt=""/></a>
                 </div>
                 <h1>{props.title}</h1>
+                <div className="rating">
+                    <RatingForProducts rating={props.rating} comments={props.comments} />
+                </div>
                 <p>В наличии</p>
                 <div className="prices">
                     <h2 className="price"><Price value={props.newPrice ? props.newPrice : props.price}/></h2>
@@ -18,7 +22,9 @@ export default function ProductBlock(props) {
                         <h4>-{Math.round((props.price - props.newPrice) / props.price * 100)}%</h4>
                     </div>}
                 </div>
-                <button>Подробнее</button>
+                <a href="/card">
+                    <button>Подробнее</button>
+                </a>
             </div>
         </>
     )

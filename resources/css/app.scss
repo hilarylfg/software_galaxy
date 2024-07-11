@@ -134,7 +134,7 @@ header {
         flex-grow: 1;
     }
 
-    ul.btns {
+    ul.buttons {
         margin-left: 30px;
 
         p {
@@ -142,7 +142,7 @@ header {
         }
     }
 
-    .btn {
+    .button {
         p {
             font-size: 12px;
         }
@@ -150,9 +150,9 @@ header {
         text-align: center;
     }
 
-    ul.btns li {
+    ul.buttons li {
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: center;
         margin-right: 20px;
 
         &:last-child {
@@ -699,6 +699,26 @@ footer {
 
             .specs {
                 width: 380px;
+
+                .rating {
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+
+                    .stars {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    img {
+                        width: 15px;
+                        margin-right: 5px;
+                    }
+
+                    span {
+                        margin-left: 3px;
+                    }
+                }
             }
 
             .price {
@@ -845,7 +865,7 @@ footer {
 
         p {
             font-family: $second-font;
-            margin: 10px 0;
+            margin-bottom: 10px;
             font-size: 14px;
             color: green;
         }
@@ -902,6 +922,26 @@ footer {
                     font-size: 15px;
                     font-weight: normal;
                 }
+            }
+        }
+
+        .rating {
+            margin: 2px 0;
+            display: flex;
+            align-items: center;
+
+            .stars {
+                display: flex;
+                align-items: center;
+            }
+
+            img {
+                width: 12px;
+                margin-right: 4px;
+            }
+
+            span {
+                margin-left: 3px;
             }
         }
     }

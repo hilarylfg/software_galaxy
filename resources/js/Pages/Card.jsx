@@ -1,6 +1,7 @@
 import Header from "@/Components/Header";
 import Footer from "@/Components/Footer";
 import Price from "@/Components/PriceFormatter.jsx";
+import RatingForProducts from "@/Components/RatingForProducts.jsx";
 
 export default function Card() {
     return (
@@ -19,7 +20,8 @@ export default function Card() {
                     <div className="info">
                         <div className="specs">
                             <h1>Windows 11</h1>
-                            <p></p>
+                            <p>от Microsoft</p>
+                            <RatingForProducts rating="5"/>
                         </div>
                         <div className="price">
                             <h2><Price value={15999}/></h2>

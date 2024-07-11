@@ -59,14 +59,12 @@ export default function Catalog() {
                             <h4>Сортировка: по популярности</h4>
                         </div>
                         <div className="products">
-                            <ProductBlock title={title} price={25999} newPrice={19999}/>
+                            <ProductBlock title={title} price={25999} newPrice={19999} rating={2} comments={4}/>
                             <ProductBlock title={title} price={45000}/>
                             <ProductBlock title={title} price={25999} newPrice={19999}/>
                             <ProductBlock title={title} price={25999} newPrice={19999}/>
                             <ProductBlock title={title} price={25999} newPrice={19999}/>
                             <ProductBlock title={title} price={25999} newPrice={19999}/>
-
-
 
                         </div>
                     </div>

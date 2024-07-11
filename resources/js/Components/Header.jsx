@@ -15,16 +15,16 @@ export default function Header() {
                     <li><Link href="/certificates">Сертификаты</Link></li>
                 </ul>
             </nav>
-            <ul className="btns">
-                <li><div className='btn'>
+            <ul className="buttons">
+                <li><div className='button'>
                     <Link href="#"><img src="/img/favorite.svg" alt=''/></Link>
                     <p>Избранное</p>
                     </div></li>
-                <li><div className='btn'>
+                <li><div className='button'>
                     <Link href="#"><img src="/img/cart.svg" alt=''/></Link>
                     <p>Корзина</p>
                     </div></li>
-                <li><div className='btn'>
+                <li><div className='button'>
                     <Link href="#"><img src="/img/profile.svg" alt=''/></Link>
                     <p>Профиль</p>
                     </div></li>

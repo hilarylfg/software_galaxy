@@ -114,24 +114,24 @@ header input {
   z-index: 1;
   flex-grow: 1;
 }
-header ul.btns {
+header ul.buttons {
   margin-left: 30px;
 }
-header ul.btns p {
+header ul.buttons p {
   font-size: 12px;
 }
-header .btn {
+header .button {
   text-align: center;
 }
-header .btn p {
+header .button p {
   font-size: 12px;
 }
-header ul.btns li {
+header ul.buttons li {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: center;
   margin-right: 20px;
 }
-header ul.btns li:last-child {
+header ul.buttons li:last-child {
   margin-right: 0;
 }
 header nav ul li.active::after {
@@ -585,6 +585,22 @@ footer > p {
 .card .product .info .specs {
   width: 380px;
 }
+.card .product .info .specs .rating {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.card .product .info .specs .rating .stars {
+  display: flex;
+  align-items: center;
+}
+.card .product .info .specs .rating img {
+  width: 15px;
+  margin-right: 5px;
+}
+.card .product .info .specs .rating span {
+  margin-left: 3px;
+}
 .card .product .info .price {
   position: relative;
   background: #2A2A2A;
@@ -707,7 +723,7 @@ footer > p {
 }
 .list .product-block p {
   font-family: "Rubik", sans-serif;
-  margin: 10px 0;
+  margin-bottom: 10px;
   font-size: 14px;
   color: green;
 }
@@ -755,6 +771,22 @@ footer > p {
   color: #d45959;
   font-size: 15px;
   font-weight: normal;
+}
+.list .product-block .rating {
+  margin: 2px 0;
+  display: flex;
+  align-items: center;
+}
+.list .product-block .rating .stars {
+  display: flex;
+  align-items: center;
+}
+.list .product-block .rating img {
+  width: 12px;
+  margin-right: 4px;
+}
+.list .product-block .rating span {
+  margin-left: 3px;
 }
 
 /*# sourceMappingURL=app.css.map */
