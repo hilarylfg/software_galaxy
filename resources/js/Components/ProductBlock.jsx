@@ -12,7 +12,7 @@ export default function ProductBlock(props) {
                 </div>
                 <h1>{props.title}</h1>
                 <div className="rating">
-                    <RatingForProducts rating={props.rating} comments={props.comments} />
+                    <RatingForProducts rating={props.rating} count={props.count} />
                 </div>
                 <p>В наличии</p>
                 <div className="prices">
