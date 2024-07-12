@@ -1,10 +1,11 @@
 import Footer from "@/Components/Footer";
 import Header from "@/Components/Header";
 import ProductBlock from "@/Components/ProductBlock.jsx";
+import useProducts from "@/hooks/useProducts.jsx";
 
 export default function Catalog() {
 
-    const title = "Windows"
+    const { products, error } = useProducts();
 
     return (
         <>
@@ -59,12 +60,17 @@ export default function Catalog() {
                             <h4>Сортировка: по популярности</h4>
                         </div>
                         <div className="products">
-                            <ProductBlock title={title} price={25999} newPrice={19999} rating={2.64} count={442}/>
-                            <ProductBlock title={title} price={45000} rating={4.6} count={48}/>
-                            <ProductBlock title={title} price={25999} newPrice={19999}/>
-                            <ProductBlock title={title} price={25999} newPrice={19999}/>
-                            <ProductBlock title={title} price={25999} newPrice={19999}/>
-                            <ProductBlock title={title} price={25999} newPrice={19999}/>
+                            {products.map(product => (
+                                <ProductBlock
+                                    key={product.id}
+                                    title={product.title}
+                                    price={product.price}
+                                    newPrice={product.newPrice}
+                                    rating={product.rating}
+                                    count={product.count}
+                                    picture={product.picture}
+                                />
+                            ))}
 
                         </div>
                     </div>

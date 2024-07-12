@@ -7,7 +7,7 @@ export default function ProductBlock(props) {
         <>
             <div className="product-block">
                 <div className="images">
-                    <img src="/img/products/product.png" alt=""/>
+                    <img src={'/img/products/' + props.picture} alt=""/>
                     <a href="#"><img className="favorite addToFavorite" src="/img/favorite.svg" alt=""/></a>
                 </div>
                 <h1>{props.title}</h1>
