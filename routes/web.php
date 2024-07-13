@@ -30,5 +30,3 @@ Route::get('/catalog', function () {
 Route::get('/card', function () {
     return Inertia::render('Card');
 });
-
-

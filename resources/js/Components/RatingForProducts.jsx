@@ -25,7 +25,7 @@ export default function RatingForProducts({rating = 0, count = 0}) {
         <>
             <div className="rating">
                 <div className="stars" dangerouslySetInnerHTML={{__html: stars}}/>
-                <span>{count}</span>
+                <span>{count} оценок</span>
             </div>
         </>
     )

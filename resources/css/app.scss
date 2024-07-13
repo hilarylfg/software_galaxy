@@ -64,6 +64,30 @@ button {
     margin: 0 auto;
 }
 
+.in-stock {
+    color: green;
+}
+
+.not-in-stock {
+    color: indianred;
+}
+
+button.in-stock {
+    background: $purple;
+
+    &:hover {
+        background: $bright-purple;
+    }
+}
+
+button.not-in-stock {
+    background: gray;
+
+    &:hover {
+        background: darkgray;
+    }
+}
+
 /* Header */
 
 header {
@@ -782,7 +806,7 @@ footer {
 
     .filters {
         background-color: $gray;
-        width: 280px;
+        width: fit-content;
         height: fit-content;
         padding: 20px 20px;
         border-radius: 20px;
@@ -809,7 +833,7 @@ footer {
             display: flex;
 
             input {
-                width: 100%;
+                width: 125px;
                 background: $white;
                 outline: none;
                 border: 0;
@@ -828,6 +852,7 @@ footer {
 }
 
 .list {
+    width: 100%;
     .settings {
         display: flex;
         align-items: center;
@@ -867,12 +892,10 @@ footer {
             font-family: $second-font;
             margin-bottom: 10px;
             font-size: 14px;
-            color: green;
         }
 
         button {
             width: 100%;
-            background: $purple;
             color: $white;
             border-radius: 10px;
             height: 40px;
@@ -881,7 +904,6 @@ footer {
 
             &:hover {
                 cursor: pointer;
-                background: $bright-purple;
             }
         }
 

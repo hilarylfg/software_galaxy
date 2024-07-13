@@ -13,7 +13,6 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': '/resources/js',
-            'p@': '/public/img/products',
         },
     },
 });

@@ -16,10 +16,14 @@ return new class extends Migration
             $table->string('title');
             $table->integer('price');
             $table->integer('newPrice')->nullable();
-            $table->float('rating')->default(0);
-            $table->integer('count')->default(0);
             $table->string('picture');
+            $table->integer('count')->default(0);
+            $table->float('rating')->default(0);
+            $table->enum('available', ['Есть в наличии', 'Нет в наличии']);
+            $table->string('developer')->nullable();
+            $table->string('edition')->nullable();
         });
+
     }
 
     /**

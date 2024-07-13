@@ -16,10 +16,13 @@ class ProductController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'price' => 'required|numeric',
+            'price' => 'required|integer',
             'newPrice' => 'nullable|numeric',
-            'rating' => 'required|integer',
+            'rating' => 'required|numeric',
             'count' => 'required|integer',
+            'available' => 'required|in:Есть в наличии,Нет в наличии',
+            'developer' => 'required|string',
+            'picture' => 'required|string',
         ]);
 
         return Product::create($request->all());
@@ -34,10 +37,13 @@ class ProductController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'price' => 'required|numeric',
+            'price' => 'required|integer',
             'newPrice' => 'nullable|numeric',
-            'rating' => 'required|integer',
+            'rating' => 'required|numeric',
             'count' => 'required|integer',
+            'available' => 'required|in:Есть в наличии,Нет в наличии',
+            'developer' => 'required|string',
+            'picture' => 'required|string',
         ]);
 
         $product->update($request->all());
