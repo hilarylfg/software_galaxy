@@ -1,60 +1,66 @@
-import {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
-export default function Filters({products, setFilteredProducts}) {
-    const [available, setAvailable] = useState('');
-    const [developer, setDeveloper] = useState('');
-    const [edition, setEdition] = useState('');
-    const [minPrice, setMinPrice] = useState('');
-    const [maxPrice, setMaxPrice] = useState('');
-    const [newPrice, setNewPrice] = useState('');
-    const [minRating, setMinRating] = useState('');
-    const [maxRating, setMaxRating] = useState('');
+export default function Filters({ products, setFilteredProducts }) {
+    const [filters, setFilters] = useState({
+        available: [],
+        developers: [],
+        editions: [],
+        minPrice: '',
+        maxPrice: '',
+        minRating: '',
+        maxRating: ''
+    });
 
     useEffect(() => {
-        if (products.length > 0) {
-            handleFilter();
-        }
-    }, [available, developer, edition, minPrice, maxPrice, newPrice, minRating, maxRating, products]);
+        if (products.length > 0) handleFilter();
+    }, [filters, products]);
 
     const handleFilter = () => {
-        if (products.length === 0) return;
-
         let filtered = products;
 
-        if (available) {
-            filtered = filtered.filter(product => product.available === available);
-        }
-
-        if (developer) {
-            filtered = filtered.filter(product => product.developer === developer);
-        }
-
-        if (edition) {
-            filtered = filtered.filter(product => product.edition === edition);
-        }
-
-        if (minPrice) {
-            filtered = filtered.filter(product => product.newPrice ? product.newPrice >= minPrice : product.price >= minPrice);
-        }
-
-        if (maxPrice) {
-            filtered = filtered.filter(product => product.newPrice ? product.newPrice <= maxPrice : product.price <= maxPrice);
-        }
-
-        if (minRating) {
-            filtered = filtered.filter(product => product.rating >= minRating);
-        }
-
-        if (maxRating) {
-            filtered = filtered.filter(product => product.rating <= maxRating);
-        }
+        Object.keys(filters).forEach(key => {
+            if (Array.isArray(filters[key]) && filters[key].length > 0) {
+                filtered = filtered.filter(product => filters[key].includes(product[key]));
+            } else if (filters[key]) {
+                if (key === 'minPrice') {
+                    filtered = filtered.filter(product => (product.newPrice || product.price) >= filters[key]);
+                } else if (key === 'maxPrice') {
+                    filtered = filtered.filter(product => (product.newPrice || product.price) <= filters[key]);
+                } else if (key === 'minRating') {
+                    filtered = filtered.filter(product => product.rating >= filters[key]);
+                } else if (key === 'maxRating') {
+                    filtered = filtered.filter(product => product.rating <= filters[key]);
+                }
+            }
+        });
 
         setFilteredProducts(filtered);
     };
 
-    const handleCheckboxChange = (setter) => (value) => (event) => {
-        setter(event.target.checked ? value : '');
+    const handleCheckboxChange = (category, value) => (event) => {
+        setFilters(prevFilters => {
+            const newValues = event.target.checked
+                ? [...prevFilters[category], value]
+                : prevFilters[category].filter(v => v !== value);
+            return { ...prevFilters, [category]: newValues };
+        });
     };
+
+    const handleInputChange = (category) => (event) => {
+        setFilters(prevFilters => ({ ...prevFilters, [category]: event.target.value }));
+    };
+
+    const renderCheckbox = (category, value, label) => (
+        <div key={value}>
+            <input
+                type="checkbox"
+                value={value}
+                checked={filters[category].includes(value)}
+                onChange={handleCheckboxChange(category, value)}
+            />
+            {label}
+        </div>
+    );
 
     return (
         <div className="filters">
@@ -63,18 +69,18 @@ export default function Filters({products, setFilteredProducts}) {
                 <div className="price-filter">
                     <input
                         type="number"
-                        value={minPrice}
+                        value={filters.minPrice}
                         placeholder="от 1"
-                        onChange={(e) => setMinPrice(e.target.value)}
+                        onChange={handleInputChange('minPrice')}
                         step="100"
                         min={1}
                         max={999999}
                     />
                     <input
                         type="number"
-                        value={maxPrice}
+                        value={filters.maxPrice}
                         placeholder="до 999999"
-                        onChange={(e) => setMaxPrice(e.target.value)}
+                        onChange={handleInputChange('maxPrice')}
                         step="100"
                         min={1}
                         max={999999}
@@ -86,18 +92,18 @@ export default function Filters({products, setFilteredProducts}) {
                 <div className="price-filter">
                     <input
                         type="number"
-                        value={minRating}
+                        value={filters.minRating}
                         placeholder="от 1"
-                        onChange={(e) => setMinRating(e.target.value)}
+                        onChange={handleInputChange('minRating')}
                         step="0.1"
                         min={1}
                         max={5}
                     />
                     <input
                         type="number"
-                        value={maxRating}
+                        value={filters.maxRating}
                         placeholder="до 5"
-                        onChange={(e) => setMaxRating(e.target.value)}
+                        onChange={handleInputChange('maxRating')}
                         step="0.1"
                         min={1}
                         max={5}
@@ -106,74 +112,21 @@ export default function Filters({products, setFilteredProducts}) {
             </div>
             <div className="filter-block">
                 <h2>Наличие</h2>
-                <input
-                    type="checkbox"
-                    value="Есть в наличии"
-                    checked={available === 'Есть в наличии'}
-                    onChange={handleCheckboxChange(setAvailable)('Есть в наличии')}
-                />
-                Есть в наличии
-                <br/>
-                <input
-                    type="checkbox"
-                    value="Нет в наличии"
-                    checked={available === 'Нет в наличии'}
-                    onChange={handleCheckboxChange(setAvailable)('Нет в наличии')}
-                />
-                Нет в наличии
+                {renderCheckbox('available', 'Есть в наличии', 'Есть в наличии')}
+                {renderCheckbox('available', 'Нет в наличии', 'Нет в наличии')}
             </div>
             <div className="filter-block">
                 <h2>Разработчик</h2>
-                <input
-                    type="checkbox"
-                    value="Microsoft"
-                    checked={developer === 'Microsoft'}
-                    onChange={handleCheckboxChange(setDeveloper)('Microsoft')}
-                />
-                Microsoft
-                <br/>
-                <input
-                    type="checkbox"
-                    value="Adobe"
-                    checked={developer === 'Adobe'}
-                    onChange={handleCheckboxChange(setDeveloper)('Adobe')}
-                />
-                Adobe
-                <br/>
-                <input
-                    type="checkbox"
-                    value="Autodesk"
-                    checked={developer === 'Autodesk'}
-                    onChange={handleCheckboxChange(setDeveloper)('Autodesk')}
-                />
-                Autodesk
+                {renderCheckbox('developers', 'Microsoft', 'Microsoft')}
+                {renderCheckbox('developers', 'Adobe', 'Adobe')}
+                {renderCheckbox('developers', 'Autodesk', 'Autodesk')}
             </div>
             <div className="filter-block">
                 <h2>Версия</h2>
-                <input
-                    type="checkbox"
-                    value="Home"
-                    checked={edition === 'Home'}
-                    onChange={handleCheckboxChange(setEdition)('Home')}
-                />
-                Home
-                <br/>
-                <input
-                    type="checkbox"
-                    value="Pro"
-                    checked={edition === 'Pro'}
-                    onChange={handleCheckboxChange(setEdition)('Pro')}
-                />
-                Pro
-                <br/>
-                <input
-                    type="checkbox"
-                    value="Enterprise"
-                    checked={edition === 'Enterprise'}
-                    onChange={handleCheckboxChange(setEdition)('Enterprise')}
-                />
-                Enterprise
+                {renderCheckbox('editions', 'Home', 'Home')}
+                {renderCheckbox('editions', 'Pro', 'Pro')}
+                {renderCheckbox('editions', 'Enterprise', 'Enterprise')}
             </div>
         </div>
     );
-};
+}
