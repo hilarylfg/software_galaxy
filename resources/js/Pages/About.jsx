@@ -1,6 +1,7 @@
 import CheckEmail from "@/Components/CheckEmail"
 import Footer from "@/Components/Footer"
 import Header from "@/Components/Header"
+import {ArrowRight} from "lucide-react";
 
 export default function About() {
     return (
@@ -12,7 +13,7 @@ export default function About() {
                     <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                    <button>Get in touch <img src="/img/Vector.svg" alt=""/></button>
+                    <button>Get in touch <ArrowRight width={25} height={18}/> </button>
                 </div>
                 <img src="/img/ofiice.png" width="1792" className="img-office" alt=""/>
             </div>

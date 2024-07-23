@@ -1,6 +1,7 @@
 import CheckEmail from "@/Components/CheckEmail"
 import Footer from "@/Components/Footer"
 import Header from "@/Components/Header"
+import {MapPinned, Phone} from "lucide-react";
 
 export default function Contacts() {
   return (
@@ -24,9 +25,10 @@ export default function Contacts() {
                     </ul>
                 </div>
                 <hr/>
-                <h3><img src="/img/phone.svg" className="h3" alt=""/>+7(952)812-52-52</h3>
+                <div className="string"> <Phone/> <h3>+7(952)812-52-52</h3></div>
                 <hr/>
-                <h3><img src="/img/gps.svg" className="h3" alt=""/>г.Москва ул. Кирпичная, 33</h3>
+                <div className="string"><MapPinned/><h3>г.Москва ул. Кирпичная, 33</h3></div>
+
             </div>
         </div>
 

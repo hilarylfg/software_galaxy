@@ -93,6 +93,7 @@ button.not-in-stock {
 header {
     padding: 50px 0;
     align-items: center;
+    font-family: $second-font;
 
     &.container {
         display: flex;
@@ -111,17 +112,12 @@ header {
         align-items: center;
 
         button {
-            padding: 10px;
+            padding: 6px 8px;
             border: none;
             background-color: $purple;
             border-radius: 10px;
             cursor: pointer;
             outline: none;
-
-            img {
-                width: 26px;
-                height: auto;
-            }
         }
     }
 
@@ -134,7 +130,7 @@ header {
 
         li {
             display: inline-block;
-            margin-right: 30px;
+            margin-right: 25px;
 
             &:last-child {
                 margin-right: 0;
@@ -142,20 +138,28 @@ header {
         }
     }
 
-    input {
+    .search {
+        display: flex;
         background: $gray;
-        color: $white;
-        outline: none;
-        border: 0;
         border-radius: 10px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-        width: 300px;
+        width: 350px;
+        height: 20px;
         padding: 15px 20px;
-        margin: 0 30px;
-        position: relative;
-        z-index: 1;
-        flex-grow: 1;
+        margin: 0 30px;;
+        z-index: 30;
+        align-items: center;
+
+        input {
+            margin-left: 10px;
+            background: $gray;
+            color: $white;
+            outline: none;
+            border: 0;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+        }
     }
 
     ul.buttons {
@@ -167,11 +171,12 @@ header {
     }
 
     .button {
+        align-items: center;
+        text-align: center;
+
         p {
             font-size: 12px;
         }
-
-        text-align: center;
     }
 
     ul.buttons li {
@@ -211,39 +216,30 @@ footer {
     font-family: "Rubik", sans-serif;
     font-weight: 500;
 
+    a {
+        color: $white;
+    }
+
     .blocks {
+        display: flex;
+        justify-content: space-between;
+
         .logo {
             text-transform: uppercase;
             font-size: 32px;
             font-weight: 800;
         }
 
-        display: flex;
-        justify-content: space-between;
-
         p {
             font-size: 16px;
             width: 300px;
-            margin-top: 7px;
-        }
-
-        .us {
-            width: 200px;
-        }
-
-        p img {
             position: relative;
-            top: 7px;
-            margin-right: 10px;
-        }
-
-        a {
-            color: $white;
+            font-weight: normal;
         }
 
         h4 {
             font-weight: 700;
-            font-size: 18px;
+            font-size: 20px;
         }
 
         ul {
@@ -251,7 +247,6 @@ footer {
 
             li {
                 margin-top: 7px;
-                opacity: 0.8;
             }
         }
     }
@@ -263,7 +258,22 @@ footer {
         background: $white;
     }
 
-    .blocks .socials ul {
+    .contacts {
+        p {
+            margin-left: 6px;
+        }
+
+        .string {
+            display: flex;
+            margin-top: 7px;
+        }
+
+        a {
+            display: flex;
+        }
+    }
+
+    .socials ul {
         list-style: none;
         display: flex;
         justify-content: space-between;
@@ -517,13 +527,13 @@ footer {
             }
         }
 
-        h3 {
+        .string {
             display: flex;
             align-items: center;
-        }
 
-        img.h3 {
-            margin-right: 20px;
+            h3 {
+                margin-left: 20px;
+            }
         }
     }
 }
@@ -567,6 +577,8 @@ footer {
             border: 0;
             transition: all 500ms ease;
             z-index: 1;
+            display: flex;
+            align-items: center;
 
             &:hover {
                 cursor: pointer;

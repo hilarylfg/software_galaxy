@@ -1,4 +1,5 @@
 import { Link } from '@inertiajs/react';
+import {Mail, Map, MapPinned, Phone} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -18,10 +19,10 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className="contacts">
-                    <h4>Контакты</h4>
-                    <p><a href="https://yandex.ru/maps/org/kolledzh_svyazi_54_im_p_m_vostrukhina_podrazdeleniye_semenovskoye_5/36750795977/?ll=37.733109%2C55.778749&z=14"><img src="/img/map-footer.png" alt=""/>г. Москва ул. Кирпичная, 33</a></p>
-                    <p><img src="/img/mail-footer.png" alt=""/>main@softwaregalaxy.com</p>
-                    <p><img src="/img/phone-footer.png" alt=""/>+7(952)812-52-52</p>
+                    <div><h4>Контакты</h4></div>
+                    <div className="string"><a href="#"><MapPinned/><p>г. Москва ул. Кирпичная, 33</p></a></div>
+                    <div className="string"><Mail/><p>main@softwaregalaxy.com</p></div>
+                    <div className="string"><Phone/><p>+7(952)812-52-52</p></div>
                 </div>
                 <div className="socials">
                     <ul>

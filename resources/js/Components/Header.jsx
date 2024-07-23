@@ -1,13 +1,15 @@
 import { Link } from '@inertiajs/react';
+import SearchInput from "@/Components/SearchInput.jsx";
+import {Heart, Menu, ShoppingCart, User} from "lucide-react";
 
 export default function Header() {
   return (
     <header className="container">
             <div className="block">
-                <span className="logo"><Link href="/" >Software Galaxy</Link></span>
-                <Link href="/catalog"><button><img src="/img/catalog.svg" alt=""/></button></Link>
+                <Link href="/" ><span className="logo">Software Galaxy</span></Link>
+                <Link href="/catalog"><button> <Menu width={28} color="white"/> </button></Link>
             </div>
-            <input type="text" placeholder="Поиск по сайту"/>
+            <SearchInput/>
             <nav>
                 <ul>
                     <li><Link href="/about">О нас</Link></li>
@@ -17,16 +19,16 @@ export default function Header() {
             </nav>
             <ul className="buttons">
                 <li><div className='button'>
-                    <Link href="#"><img src="/img/favorite.svg" alt=''/></Link>
-                    <p>Избранное</p>
+                    <Link href="#"><Heart width={25}/>
+                    <p>Избранное</p></Link>
                     </div></li>
                 <li><div className='button'>
-                    <Link href="#"><img src="/img/cart.svg" alt=''/></Link>
-                    <p>Корзина</p>
+                    <Link href="#"><ShoppingCart width={25}/>
+                    <p>Корзина</p></Link>
                     </div></li>
                 <li><div className='button'>
-                    <Link href="#"><img src="/img/profile.svg" alt=''/></Link>
-                    <p>Профиль</p>
+                    <Link href="#"><User width={25}/>
+                    <p>Профиль</p></Link>
                     </div></li>
             </ul>
         </header>
