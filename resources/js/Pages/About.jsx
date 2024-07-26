@@ -2,10 +2,14 @@ import CheckEmail from "@/Components/CheckEmail"
 import Footer from "@/Components/Footer"
 import Header from "@/Components/Header"
 import {ArrowRight} from "lucide-react";
+import {Head} from "@inertiajs/react";
 
 export default function About() {
+
     return (
         <>
+            <Head title="Software Galaxy | О нас"/>
+
             <Header/>
             <div className="container hero-about">
                 <div className="block">

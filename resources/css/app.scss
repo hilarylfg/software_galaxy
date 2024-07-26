@@ -19,6 +19,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: $white;
+    min-width: 1400px;
 }
 
 a {
@@ -87,6 +88,8 @@ button.not-in-stock {
         background: darkgray;
     }
 }
+
+/* Adaptive */
 
 /* Header */
 
@@ -163,6 +166,7 @@ header {
     }
 
     ul.buttons {
+        width: 210px;
         margin-left: 30px;
 
         p {
@@ -370,6 +374,12 @@ footer {
 .hero {
     padding-bottom: 100px;
     position: relative;
+
+    img {
+        position: absolute;
+        top: 25px;
+        right: 100px;
+    }
 }
 
 .hero--info {
@@ -412,25 +422,19 @@ footer {
     }
 }
 
-.hero img {
-    position: absolute;
-    top: 25px;
-    right: 100px;
-}
-
 /* Тренды */
 
 .trending {
     padding-top: 50px;
 
     h3 {
-        font-family: "Rubik", sans-serif;
+        font-family: $second-font;
         font-weight: 700;
         font-size: 31px;
     }
 
     .see-all {
-        font-family: "Rubik", sans-serif;
+        font-family: $second-font;
         font-weight: 500;
         color: $white;
         background: rgb(163, 79, 250);
@@ -507,14 +511,14 @@ footer {
     }
 
     .block {
-        hr {
-            height: 102px;
-        }
-
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-family: "Rubik", sans-serif;
+        font-family: $second-font;
+
+        hr {
+            height: 102px;
+        }
 
         .follow ul {
             list-style: none;
@@ -865,6 +869,7 @@ footer {
 
 .list {
     width: 100%;
+
     .settings {
         display: flex;
         align-items: center;

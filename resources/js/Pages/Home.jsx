@@ -1,10 +1,13 @@
 import Header from '@/Components/Header';
 import CheckEmail from '@/Components/CheckEmail';
 import Footer from '@/Components/Footer';
+import {Head} from "@inertiajs/react";
 
-export default function Welcome() {
+export default function Home() {
   return (
     <>
+        <Head title="Software Galaxy | Главная"/>
+
         <Header />
 
             <div className="hero container">

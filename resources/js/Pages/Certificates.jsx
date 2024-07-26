@@ -1,10 +1,13 @@
 import CheckEmail from "@/Components/CheckEmail";
 import Header from "@/Components/Header";
 import Footer from "@/Components/Footer";
+import {Head} from "@inertiajs/react";
 
 export default function Certificates() {
     return (
         <>
+            <Head title="Software Galaxy | Сертификаты"/>
+
             <Header />
             <div className="container certificates">
                 <div className="head">

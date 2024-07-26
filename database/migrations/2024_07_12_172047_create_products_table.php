@@ -20,8 +20,8 @@ return new class extends Migration
             $table->integer('count')->default(0);
             $table->float('rating')->default(0);
             $table->enum('available', ['Есть в наличии', 'Нет в наличии']);
-            $table->string('developer')->nullable();
-            $table->string('edition')->nullable();
+            $table->enum('developer', ['Adobe', 'Microsoft', 'Autodesk'])->nullable();
+            $table->enum('edition', ['Home', 'Pro', 'Enterprise'])->nullable();
         });
 
     }

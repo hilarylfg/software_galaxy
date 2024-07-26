@@ -5,6 +5,7 @@ import ProductList from "@/Components/ProductList.jsx";
 import {useState} from "react";
 import Filters from "@/Components/Filters.jsx";
 import useProducts from "@/Hooks/useProducts.jsx";
+import {Head} from "@inertiajs/react";
 
 export default function Catalog() {
 
@@ -13,6 +14,8 @@ export default function Catalog() {
 
     return (
         <>
+            <Head title="Software Galaxy | Каталог"/>
+
             <Header />
 
             <div className="container">

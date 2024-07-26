@@ -4,12 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-        function createStars(numberOfStars) {
-            let bgBlack = document.getElementById("bg");
 
-            for (let i = 0; i < numberOfStars; i++) {
-                let star = document.createElement("body");
+    <script>
+        function createStars() {
+            let bgBlack = document.getElementById("bg");
+            const baseStars = 1500;
+
+            for (let i = 0; i < baseStars; i++) {
+                let star = document.createElement("div");
                 star.className = "star";
                 star.style.top = Math.random() * 99.8 + "%";
                 star.style.left = Math.random() * 99.8 + "%";
@@ -37,7 +39,7 @@
     @inertiaHead
 </head>
 
-<body id="bg" class="wrapper" onload="createStars(1300)">
+<body id="bg" class="wrapper" onload="createStars()">
     @inertia
 </body>
 

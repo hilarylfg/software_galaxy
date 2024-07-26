@@ -10,6 +10,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #fff;
+  min-width: 1400px;
 }
 
 a {
@@ -77,6 +78,7 @@ button.not-in-stock:hover {
   background: darkgray;
 }
 
+/* Adaptive */
 /* Header */
 header {
   padding: 50px 0;
@@ -141,6 +143,7 @@ header .search input {
   font-size: 14px;
 }
 header ul.buttons {
+  width: 210px;
   margin-left: 30px;
 }
 header ul.buttons p {
@@ -309,6 +312,11 @@ footer > p {
   padding-bottom: 100px;
   position: relative;
 }
+.hero img {
+  position: absolute;
+  top: 25px;
+  right: 100px;
+}
 
 .hero--info {
   width: 520px;
@@ -343,12 +351,6 @@ footer > p {
 .hero--info .button:hover {
   cursor: pointer;
   transform: scale(1.1);
-}
-
-.hero img {
-  position: absolute;
-  top: 25px;
-  right: 100px;
 }
 
 /* Тренды */

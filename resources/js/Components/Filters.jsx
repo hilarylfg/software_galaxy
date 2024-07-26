@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 export default function Filters({ products, setFilteredProducts }) {
     const [filters, setFilters] = useState({
         available: [],
-        developers: [],
-        editions: [],
+        developer: [],
+        edition: [],
         minPrice: '',
         maxPrice: '',
         minRating: '',
@@ -62,6 +62,8 @@ export default function Filters({ products, setFilteredProducts }) {
         </div>
     );
 
+    console.log(filters)
+
     return (
         <div className="filters">
             <div className="filter-block">
@@ -117,15 +119,15 @@ export default function Filters({ products, setFilteredProducts }) {
             </div>
             <div className="filter-block">
                 <h2>Разработчик</h2>
-                {renderCheckbox('developers', 'Microsoft', 'Microsoft')}
-                {renderCheckbox('developers', 'Adobe', 'Adobe')}
-                {renderCheckbox('developers', 'Autodesk', 'Autodesk')}
+                {renderCheckbox('developer', 'Microsoft', 'Microsoft')}
+                {renderCheckbox('developer', 'Adobe', 'Adobe')}
+                {renderCheckbox('developer', 'Autodesk', 'Autodesk')}
             </div>
             <div className="filter-block">
                 <h2>Версия</h2>
-                {renderCheckbox('editions', 'Home', 'Home')}
-                {renderCheckbox('editions', 'Pro', 'Pro')}
-                {renderCheckbox('editions', 'Enterprise', 'Enterprise')}
+                {renderCheckbox('edition', 'Home', 'Home')}
+                {renderCheckbox('edition', 'Pro', 'Pro')}
+                {renderCheckbox('edition', 'Enterprise', 'Enterprise')}
             </div>
         </div>
     );

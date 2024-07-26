@@ -2,10 +2,13 @@ import Header from "@/Components/Header";
 import Footer from "@/Components/Footer";
 import Price from "@/Components/PriceFormatter.jsx";
 import RatingForProducts from "@/Components/RatingForProducts.jsx";
+import {Head} from "@inertiajs/react";
 
 export default function Card() {
     return (
         <>
+            <Head title="Software Galaxy | Windows 11"/>
+
             <Header/>
 
             <div className="container card">
