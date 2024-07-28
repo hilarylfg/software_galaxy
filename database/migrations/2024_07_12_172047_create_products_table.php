@@ -16,12 +16,13 @@ return new class extends Migration
             $table->string('title');
             $table->integer('price');
             $table->integer('newPrice')->nullable();
+            $table->boolean('hot');
             $table->string('picture');
             $table->integer('count')->default(0);
             $table->float('rating')->default(0);
-            $table->enum('available', ['Есть в наличии', 'Нет в наличии']);
-            $table->enum('developer', ['Adobe', 'Microsoft', 'Autodesk'])->nullable();
-            $table->enum('edition', ['Home', 'Pro', 'Enterprise'])->nullable();
+            $table->integer('availableCount');
+            $table->string('developer')->nullable();
+            $table->string('edition')->nullable();
         });
 
     }

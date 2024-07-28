@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Filters({ products, setFilteredProducts }) {
+    const [updatedProducts, setUpdatedProducts] = useState([]);
     const [filters, setFilters] = useState({
         available: [],
         developer: [],
         edition: [],
+        sale: [],
         minPrice: '',
         maxPrice: '',
         minRating: '',
@@ -12,11 +14,20 @@ export default function Filters({ products, setFilteredProducts }) {
     });
 
     useEffect(() => {
-        if (products.length > 0) handleFilter();
-    }, [filters, products]);
+        const productsWithUpdatedFields = products.map(product => ({
+            ...product,
+            sale: product.newPrice ? 'Есть скидка' : 'Нет скидки',
+            available: product.availableCount > 0 ? 'Есть в наличии' : 'Нет в наличии'
+        }));
+        setUpdatedProducts(productsWithUpdatedFields);
+    }, [products]);
+
+    useEffect(() => {
+        if (updatedProducts.length > 0) handleFilter();
+    }, [filters, updatedProducts]);
 
     const handleFilter = () => {
-        let filtered = products;
+        let filtered = updatedProducts;
 
         Object.keys(filters).forEach(key => {
             if (Array.isArray(filters[key]) && filters[key].length > 0) {
@@ -50,7 +61,7 @@ export default function Filters({ products, setFilteredProducts }) {
         setFilters(prevFilters => ({ ...prevFilters, [category]: event.target.value }));
     };
 
-    const renderCheckbox = (category, value, label) => (
+    const renderCheckbox = (category, value) => (
         <div key={value}>
             <input
                 type="checkbox"
@@ -58,7 +69,7 @@ export default function Filters({ products, setFilteredProducts }) {
                 checked={filters[category].includes(value)}
                 onChange={handleCheckboxChange(category, value)}
             />
-            {label}
+            {value}
         </div>
     );
 
@@ -111,21 +122,26 @@ export default function Filters({ products, setFilteredProducts }) {
                 </div>
             </div>
             <div className="filter-block">
+                <h2>Скидка</h2>
+                {renderCheckbox('sale', 'Есть скидка')}
+                {renderCheckbox('sale', 'Нет скидки')}
+            </div>
+            <div className="filter-block">
                 <h2>Наличие</h2>
-                {renderCheckbox('available', 'Есть в наличии', 'Есть в наличии')}
-                {renderCheckbox('available', 'Нет в наличии', 'Нет в наличии')}
+                {renderCheckbox('available', 'Есть в наличии')}
+                {renderCheckbox('available', 'Нет в наличии')}
             </div>
             <div className="filter-block">
                 <h2>Разработчик</h2>
-                {renderCheckbox('developer', 'Microsoft', 'Microsoft')}
-                {renderCheckbox('developer', 'Adobe', 'Adobe')}
-                {renderCheckbox('developer', 'Autodesk', 'Autodesk')}
+                {renderCheckbox('developer', 'Microsoft')}
+                {renderCheckbox('developer', 'Adobe')}
+                {renderCheckbox('developer', 'Autodesk')}
             </div>
             <div className="filter-block">
                 <h2>Версия</h2>
-                {renderCheckbox('edition', 'Home', 'Home')}
-                {renderCheckbox('edition', 'Pro', 'Pro')}
-                {renderCheckbox('edition', 'Enterprise', 'Enterprise')}
+                {renderCheckbox('edition', 'Home')}
+                {renderCheckbox('edition', 'Pro')}
+                {renderCheckbox('edition', 'Enterprise')}
             </div>
         </div>
     );
