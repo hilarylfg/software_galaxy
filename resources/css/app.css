@@ -745,6 +745,7 @@ footer > p {
   grid-gap: 27.5px;
 }
 .list .product-block {
+  position: relative;
   background-color: #1A1A1A;
   width: 285px;
   height: fit-content;
@@ -781,10 +782,32 @@ footer > p {
   height: 225px;
   margin: 0 auto;
 }
-.list .product-block .images img.favorite {
-  float: right;
-  width: 25px;
+.list .product-block .images .heart {
   height: 25px;
+  transition: all 300ms ease;
+}
+.list .product-block .images .heart:hover {
+  cursor: pointer;
+  background: #CD00CD;
+}
+.list .product-block .images .icons {
+  position: absolute;
+  flex-direction: column;
+  left: 25px;
+}
+.list .product-block .images .icons .pin-hot {
+  display: flex;
+  background: darkorange;
+  padding: 4px 3px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.list .product-block .images .icons .pin-sale {
+  display: flex;
+  background: rgb(248, 17, 85);
+  padding: 4px 3px;
+  border-radius: 10px;
+  margin-bottom: 8px;
 }
 .list .product-block .prices {
   display: flex;

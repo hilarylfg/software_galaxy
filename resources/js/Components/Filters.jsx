@@ -62,8 +62,6 @@ export default function Filters({ products, setFilteredProducts }) {
         </div>
     );
 
-    console.log(filters)
-
     return (
         <div className="filters">
             <div className="filter-block">
