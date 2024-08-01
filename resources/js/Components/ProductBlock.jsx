@@ -12,14 +12,14 @@ export default function ProductBlock({ product }) {
                 <div className="images">
                     <img src={'/img/products/' + product.picture} alt=""/>
                     <div className="icons">
-                        <div className="pin-hot"><Flame/></div>
+                        {product.hot === 1 && <div className="pin-hot"><Flame/></div>}
                         {product.newPrice && <div className="pin-sale"><TicketPercent width={25}/></div>}
                     </div>
                     <a className="heart"><Heart width={25}/></a>
                 </div>
                 <h1>{product.title}</h1>
                 <div className="rating">
-                    <RatingForProducts rating={product.rating} count={product.count}/>
+                    <RatingForProducts rating={product.rating} count={product.countRating}/>
                 </div>
                 <p className={availabilityClass}>{product.available}</p>
                 <div className="prices">

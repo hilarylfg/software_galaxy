@@ -17,7 +17,8 @@ export default function Filters({ products, setFilteredProducts }) {
         const productsWithUpdatedFields = products.map(product => ({
             ...product,
             sale: product.newPrice ? 'Есть скидка' : 'Нет скидки',
-            available: product.availableCount > 0 ? 'Есть в наличии' : 'Нет в наличии'
+            available: product.availableCount > 0 ? 'Есть в наличии' : 'Нет в наличии',
+            hot: product.countRating > 250 && product.rating > 4.3 ? 1 : 0
         }));
         setUpdatedProducts(productsWithUpdatedFields);
     }, [products]);

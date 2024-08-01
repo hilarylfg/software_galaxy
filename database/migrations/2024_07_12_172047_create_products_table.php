@@ -16,9 +16,8 @@ return new class extends Migration
             $table->string('title');
             $table->integer('price');
             $table->integer('newPrice')->nullable();
-            $table->boolean('hot');
             $table->string('picture');
-            $table->integer('count')->default(0);
+            $table->integer('countRating')->default(0);
             $table->float('rating')->default(0);
             $table->integer('availableCount');
             $table->string('developer')->nullable();
