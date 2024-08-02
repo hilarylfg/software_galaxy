@@ -1,10 +1,18 @@
 import Price from "@/Components/PriceFormatter.jsx";
 import RatingForProducts from "@/Components/RatingForProducts.jsx";
 import {Heart, TicketPercent, Flame} from "lucide-react";
+import {useState} from "react";
 
-export default function ProductBlock({ product }) {
+export default function ProductBlock({product}) {
 
     const availabilityClass = product.available === 'Есть в наличии' ? 'in-stock' : 'not-in-stock';
+
+    const [isFilled, setIsFilled] = useState(false);
+
+    const handleHeartClick = () => {
+        setIsFilled(!isFilled);
+        console.log(!isFilled)
+    };
 
     return (
         <>
@@ -15,7 +23,12 @@ export default function ProductBlock({ product }) {
                         {product.hot === 1 && <div className="pin-hot"><Flame/></div>}
                         {product.newPrice && <div className="pin-sale"><TicketPercent width={25}/></div>}
                     </div>
-                    <a className="heart"><Heart width={25}/></a>
+                    <a className={`heart ${isFilled ? 'filled' : ''}`} onClick={handleHeartClick}>
+                        <Heart width={25}
+                               height={25}
+                               fill={isFilled ? '#f8104b' : 'none'}
+                               color={isFilled ? '#f8104b' : 'white'}/>
+                    </a>
                 </div>
                 <h1>{product.title}</h1>
                 <div className="rating">
@@ -30,7 +43,8 @@ export default function ProductBlock({ product }) {
                     </div>}
                 </div>
                 <a href="/card">
-                    <button className={availabilityClass}>{product.available === 'Есть в наличии' ? 'Подробнее' : 'Сообщить о поступлении'}</button>
+                    <button
+                        className={availabilityClass}>{product.available === 'Есть в наличии' ? 'Подробнее' : 'Сообщить о поступлении'}</button>
                 </a>
             </div>
         </>

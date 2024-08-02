@@ -891,6 +891,15 @@ footer {
         grid-gap: calc((1060px - 335px * 3) / 2);
     }
 
+    .not-found-products {
+        text-align: center;
+        align-items: center;
+
+        h2 {
+            margin-top: 10px;
+        }
+    }
+
     .product-block {
         position: relative;
         background-color: $gray;
@@ -935,12 +944,12 @@ footer {
             }
 
             .heart {
-                height: 25px;
+                position: absolute;
+                right: 25px;
                 transition: all 300ms ease;
 
                 &:hover {
                     cursor: pointer;
-                    background: $bright-purple;
                 }
             }
 
