@@ -20,7 +20,7 @@ export default function Catalog() {
             <Header />
 
             <div className="container">
-                <h1 className="catalog-title">Каталог</h1>
+                <h1 className="title-page">Каталог</h1>
                 <div className="catalog">
                     <Filters products={products} setFilteredProducts={setFilteredProducts} />
                     <div className="list">

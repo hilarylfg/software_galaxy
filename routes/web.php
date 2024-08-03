@@ -30,3 +30,7 @@ Route::get('/catalog', function () {
 Route::get('/card', function () {
     return Inertia::render('Card');
 });
+
+Route::get('/cart', function () {
+    return Inertia::render('Cart');
+});

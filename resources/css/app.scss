@@ -89,6 +89,11 @@ button.not-in-stock {
     }
 }
 
+.title-page {
+    padding-bottom: 20px;
+    font-family: $second-font;
+}
+
 /* Adaptive */
 
 /* Header */
@@ -811,10 +816,6 @@ footer {
 }
 
 /* Catalog */
-.catalog-title {
-    padding-bottom: 20px;
-    font-family: $second-font;
-}
 
 .catalog {
     display: flex;
@@ -1022,4 +1023,158 @@ footer {
     }
 }
 
+/* Cart */
 
+.cart {
+    padding-bottom: 50px;
+    font-family: $second-font;
+
+    .main {
+        display: flex;
+
+        .products {
+            .product {
+                display: flex;
+                align-items: center;
+                float: left;
+                background: $gray;
+                padding: 15px 25px;
+                border-radius: 20px;
+                margin-right: 40px;
+
+                img {
+                    width: 8%;
+                    padding-right: 40px;
+                }
+
+                .desc {
+                    width: 480px;
+                    padding: 10px 0;
+
+                    h2 {
+                        margin-bottom: 7px;
+                    }
+                }
+
+                .block {
+                    padding: 10px 0;
+
+                    &:last-child {
+                        margin-left: auto;
+                    }
+
+                    h3 {
+                        font-size: 15px;
+                        color: gray;
+                        float: left;
+                    }
+
+                    .buttons {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 140px;
+                        height: 30px;
+
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $white;
+                            font-size: 16px;
+                            background: $gray;
+                            width: 30px;
+                            border-radius: 8px;
+                            height: 25px;
+                            border: 0;
+                            outline: 3px solid $purple;
+                            padding: 15px 0;
+                            transition: all 500ms ease;
+
+                            &:hover {
+                                outline-color: $bright-purple;
+                                cursor: pointer;
+                            }
+                        }
+
+                        input {
+                            -moz-appearance: textfield;
+                            background: $gray;
+                            color: $white;
+                            font-family: $second-font;
+                            width: 50px;
+                            padding: 6px 0;
+                            height: 18px;
+                            border-radius: 8px;
+                            text-align: center;
+                            border: none;
+                            outline: 3px solid $purple;
+                            transition: all 500ms ease;
+
+                            &:hover {
+                                outline-color: $bright-purple;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .form {
+            width: 320px;
+            flex-shrink: 0;
+            background: $gray;
+            border-radius: 20px;
+            padding: 20px;
+
+            .string {
+                display: flex;
+                align-items: center;
+                margin: 8px 0;
+
+                h4 {
+                    margin-right: auto;
+                    font-weight: normal;
+                }
+
+                h2 {
+                    margin-right: auto;
+                }
+
+                span.sale {
+                    color: #d45959;
+                }
+
+                span.final-price {
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $white;
+                font-size: 16px;
+                background: $purple;
+                width: 100%;
+                border-radius: 10px;
+                height: 40px;
+                border: 0;
+                padding: 25px 0;
+                transition: all 500ms ease;
+
+                &:hover {
+                    background: $bright-purple;
+                    cursor: pointer;
+                }
+            }
+
+            hr {
+                margin: 20px 0;
+            }
+        }
+    }
+}

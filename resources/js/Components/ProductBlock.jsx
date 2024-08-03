@@ -11,7 +11,6 @@ export default function ProductBlock({product}) {
 
     const handleHeartClick = () => {
         setIsFilled(!isFilled);
-        console.log(!isFilled)
     };
 
     return (
