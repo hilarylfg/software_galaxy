@@ -3,10 +3,32 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Vite + React + TS</title>
+        <title>Software Galaxy</title>
+        <script>
+            function createStars() {
+                let bgBlack = document.getElementById("root");
+                const baseStars = 1500;
+
+                for (let i = 0; i < baseStars; i++) {
+                    let star = document.createElement("div");
+                    star.className = "star";
+                    star.style.top = Math.random() * 99.8 + "%";
+                    star.style.left = Math.random() * 99.8 + "%";
+
+                    let size = Math.random() * 3 + "px";
+                    star.style.width = size;
+                    star.style.height = size;
+
+                    star.style.opacity = Math.random();
+
+                    bgBlack.appendChild(star);
+                }
+            }
+        </script>
     </head>
-    <body>
-        <div id="root"></div>
+    <body onload="createStars()">
+        <div id="root" class="wrapper">
+        </div>
         <script type="module" src="/src/main.tsx"></script>
     </body>
 </html>
