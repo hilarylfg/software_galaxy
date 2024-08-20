@@ -23,7 +23,7 @@ export default function Header() {
                         <p>Избранное</p></Link>
                 </div></li>
                 <li><div className='button'>
-                    <Link to="cart"><ShoppingCart width={25}/>
+                    <Link to="/cart"><ShoppingCart width={25}/>
                         <p>Корзина</p></Link>
                 </div></li>
                 <li><div className='button'>

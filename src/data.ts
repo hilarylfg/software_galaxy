@@ -1,19 +1,6 @@
-export type Product = {
-    id: number;
-    title: string;
-    price: number;
-    newPrice?: number;
-    picture: string;
-    countRating: number;
-    rating: number;
-    availableCount: number;
-    developer: string;
-    edition: string;
-}
+import { Product } from "./@types/types";
 
-type Products = Product[];
-
-export const products : Products = [
+export const data : Product[] = [
     {
         id: 1,
         title: "Windows 11",
@@ -23,7 +10,7 @@ export const products : Products = [
         countRating: 270,
         rating: 4,
         availableCount: 12,
-        developer: "Microsoft",
+        developer: "Adobe",
         edition: "Enterprise",
     },
     {

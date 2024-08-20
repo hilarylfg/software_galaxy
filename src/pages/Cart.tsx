@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Price from "../components/PriceFormatter";
+import Price from "../components/PriceFormatter"
 export default function Card() {
 
     const availability = 'Есть в наличии'

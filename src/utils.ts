@@ -1,13 +1,6 @@
-import {products} from "./data.ts";
+import {data} from "./data.ts";
+import {Product} from "./@types/types.ts";
 
-export function getProducts() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve(products);
-        }, 500)
-    });
-}
-
-export function Price({ value } : {value: number}) {
-    return value.toLocaleString("ru-RU") + " ₽";
+export function getProducts(): Product[] {
+    return data;
 }

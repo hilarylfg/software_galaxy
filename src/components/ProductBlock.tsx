@@ -1,10 +1,15 @@
-import Price from "../components/PriceFormatter.jsx";
-import RatingForProducts from "../components/RatingForProducts.jsx";
+import Price from "../components/PriceFormatter";
+import RatingForProducts from "../components/RatingForProducts";
+
 import {Heart, TicketPercent, Flame} from "lucide-react";
 import {useState} from "react";
+import {Product} from "../@types/types.ts";
 
+interface ProductBlockProps {
+    product: Product;
+}
 
-export default function ProductBlock({ product }) {
+export default function ProductBlock({ product } : ProductBlockProps){
 
     const availabilityClass = product.available === 'Есть в наличии' ? 'in-stock' : 'not-in-stock';
 

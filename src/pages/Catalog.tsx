@@ -1,34 +1,36 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ProductList from "../components/ProductList";
+import Filters from "../components/Filters";
 
 import {useEffect, useState} from "react";
-import Filters from "../components/Filters";
 import {SearchX} from "lucide-react";
 import {getProducts} from "../utils.ts";
+import {Product} from "../@types/types.ts";
 
 export default function Catalog() {
-    const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
+
+    const [products, setProducts] = useState<Product[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [filteredProducts, setFilteredProducts] = useState(products);
 
     useEffect(() => {
-        // Функция для загрузки продуктов
-        const loadProducts = async () => {
+        const fetchProducts = async () => {
             try {
-                const products = await getProducts();
-                setFilteredProducts(products);
+                const data = await getProducts();
+                setProducts(data);
             } catch (error) {
-                console.error('Error fetching products:', error);
+                console.error('Failed to fetch products:', error);
             } finally {
                 setIsLoading(false);
             }
         };
 
-        loadProducts();
+        fetchProducts();
     }, []);
 
     if (isLoading) {
-        return <div>Loading...</div>; // Можно заменить на спиннер или другой индикатор загрузки
+        return <div>Loading...</div>;
     }
 
     return (
@@ -38,9 +40,9 @@ export default function Catalog() {
             <div className="container">
                 <h1 className="title-page">Каталог</h1>
                 <div className="catalog">
-                    <Filters products={getProducts()} setFilteredProducts={setFilteredProducts} />
+                    <Filters products={products} setFilteredProducts={setFilteredProducts} />
                     <div className="list">
-                        <ProductList products={filteredProducts} />
+                        <ProductList products={filteredProducts}/>
                         {filteredProducts.length === 0 &&
                             <div className="not-found-products">
                                 <SearchX width={100} height={100}/>

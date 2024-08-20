@@ -1,6 +1,11 @@
 import ProductBlock from '../components/ProductBlock.jsx';
+import {Product} from "../@types/types.ts";
 
-export default function ProductList({ products }) {
+interface Props {
+    products: Product[];
+}
+
+export default function ProductList({ products } : Props) {
     return (
         <>
             <div className="settings">

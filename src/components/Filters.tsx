@@ -1,8 +1,25 @@
-import {useEffect, useState} from 'react';
+import {ChangeEvent, useEffect, useState} from 'react';
+import {Product} from "../@types/types.ts";
 
-export default function Filters({ products, setFilteredProducts }) {
-    const [updatedProducts, setUpdatedProducts] = useState([]);
-    const [filters, setFilters] = useState({
+interface FiltersProps {
+    products: Product[];
+    setFilteredProducts: (products: Product[]) => void;
+}
+
+interface FiltersState {
+    available: string[];
+    developer: string[];
+    edition: string[];
+    sale: string[];
+    minPrice: string;
+    maxPrice: string;
+    minRating: string;
+    maxRating: string;
+}
+
+export default function Filters({ products, setFilteredProducts } : FiltersProps) {
+    const [updatedProducts, setUpdatedProducts] = useState<Product[]>([]);
+    const [filters, setFilters] = useState<FiltersState>({
         available: [],
         developer: [],
         edition: [],
@@ -26,22 +43,26 @@ export default function Filters({ products, setFilteredProducts }) {
     useEffect(() => {
         if (updatedProducts.length > 0) handleFilter();
     }, [filters, updatedProducts]);
-
+    
     const handleFilter = () => {
         let filtered = updatedProducts;
 
-        Object.keys(filters).forEach(key => {
-            if (Array.isArray(filters[key]) && filters[key].length > 0) {
-                filtered = filtered.filter(product => filters[key].includes(product[key]));
-            } else if (filters[key]) {
-                if (key === 'minPrice') {
-                    filtered = filtered.filter(product => (product.newPrice || product.price) >= filters[key]);
-                } else if (key === 'maxPrice') {
-                    filtered = filtered.filter(product => (product.newPrice || product.price) <= filters[key]);
-                } else if (key === 'minRating') {
-                    filtered = filtered.filter(product => product.rating >= filters[key]);
-                } else if (key === 'maxRating') {
-                    filtered = filtered.filter(product => product.rating <= filters[key]);
+        (Object.keys(filters) as Array<keyof FiltersState>).forEach(key => {
+            const filterKey = key;
+            const filterValue = filters[filterKey]; // Получаем значение фильтра
+
+            if (Array.isArray(filterValue) && filterValue.length > 0) {
+                filtered = filtered.filter(product => filterValue.includes(product[filterKey as keyof Product] as unknown as string));
+            } else if (filterValue) {
+                const numericValue = Number(filterValue); // Преобразуем строку в число
+                if (filterKey === 'minPrice') {
+                    filtered = filtered.filter(product => (product.newPrice || product.price) >= numericValue);
+                } else if (filterKey === 'maxPrice') {
+                    filtered = filtered.filter(product => (product.newPrice || product.price) <= numericValue);
+                } else if (filterKey === 'minRating') {
+                    filtered = filtered.filter(product => product.rating >= numericValue);
+                } else if (filterKey === 'maxRating') {
+                    filtered = filtered.filter(product => product.rating <= numericValue);
                 }
             }
         });
@@ -49,20 +70,22 @@ export default function Filters({ products, setFilteredProducts }) {
         setFilteredProducts(filtered);
     };
 
-    const handleCheckboxChange = (category, value) => (event) => {
+    const handleCheckboxChange = (category: keyof FiltersState, value: string) => (event: ChangeEvent<HTMLInputElement>) => {
         setFilters(prevFilters => {
+            const currentFilterValues = prevFilters[category] as string[];
             const newValues = event.target.checked
-                ? [...prevFilters[category], value]
-                : prevFilters[category].filter(v => v !== value);
+                ? [...currentFilterValues, value]
+                : currentFilterValues.filter(v => v !== value);
+
             return { ...prevFilters, [category]: newValues };
         });
     };
 
-    const handleInputChange = (category) => (event) => {
+    const handleInputChange = (category: keyof FiltersState) => (event: ChangeEvent<HTMLInputElement>) => {
         setFilters(prevFilters => ({ ...prevFilters, [category]: event.target.value }));
     };
 
-    const renderCheckbox = (category, value) => (
+    const renderCheckbox = (category: keyof FiltersState, value: string) => (
         <div key={value}>
             <input
                 type="checkbox"
