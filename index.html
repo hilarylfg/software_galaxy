@@ -24,9 +24,13 @@
                     bgBlack.appendChild(star);
                 }
             }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                createStars();
+            });
         </script>
     </head>
-    <body onload="createStars()">
+    <body>
         <div id="root" class="wrapper">
         </div>
         <script type="module" src="/src/main.tsx"></script>

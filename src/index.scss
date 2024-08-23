@@ -95,7 +95,62 @@ button.not-in-stock {
     font-family: $second-font;
 }
 
-/* Adaptive */
+/* loading */
+
+.loading {
+    display: block;
+
+    .loading-title {
+        h2 {
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+
+    .loading-round {
+        display: block;
+        width: 70px;
+        height: 70px;
+        margin: 5px auto;
+        box-sizing: border-box;
+        position: relative;
+        animation: 2s ease-in-out 0s infinite rotate-anim;
+
+        &>span {
+            display: block;
+            position: absolute;
+            left: 35px;
+            content: '';
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: $white;
+            opacity: 0.8;
+            transform: translate(-50%, 0);
+        }
+
+        span.r2 {
+            left: 57px; top: 14px; opacity: 0.7;
+        }
+
+        span.r3 {
+            left: 57px; top: 37px; opacity: 0.6;
+        }
+
+        span.r4 {
+            left: 35px; top: 50px; opacity: 0.5;
+        }
+
+        span.r5 {
+            left: 13px; top: 37px; opacity: 0.4;
+        }
+    }
+}
+
+@keyframes rotate-anim {
+    0% {transform: rotate(0deg) ;}
+    100% {transform: rotate(-360deg) ;}
+}
 
 /* Header */
 
@@ -871,6 +926,10 @@ footer {
 
 .list {
     width: 100%;
+
+    .loading {
+        margin-top: 50px;
+    }
 
     .settings {
         display: flex;
