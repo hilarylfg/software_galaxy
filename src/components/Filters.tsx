@@ -1,5 +1,5 @@
 import {ChangeEvent, useEffect, useState} from 'react';
-import {Product} from "../@types/types.ts";
+import {Product} from "../../@types/types.ts";
 
 interface FiltersProps {
     products: Product[];

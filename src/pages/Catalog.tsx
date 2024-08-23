@@ -4,7 +4,7 @@ import ProductList from "../components/ProductList";
 import Filters from "../components/Filters";
 
 import {getProducts} from "../utils";
-import {Product} from "../@types/types";
+import {Product} from "../../@types/types";
 import Progress from "../components/Loading.tsx";
 
 import {useEffect, useState} from "react";

@@ -1,5 +1,5 @@
 import ProductBlock from '../components/ProductBlock.jsx';
-import {Product} from "../@types/types.ts";
+import {Product} from "../../@types/types.ts";
 
 interface Props {
     products: Product[];

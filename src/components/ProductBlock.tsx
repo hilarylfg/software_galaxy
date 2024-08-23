@@ -3,7 +3,7 @@ import RatingForProducts from "../components/RatingForProducts";
 
 import {Heart, TicketPercent, Flame} from "lucide-react";
 import {useState} from "react";
-import {Product} from "../@types/types.ts";
+import {Product} from "../../@types/types.ts";
 
 interface ProductBlockProps {
     product: Product;
